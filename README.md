@@ -1,7 +1,7 @@
 # kaonlt_analysis
 scripts and stuff outside of the ones in hallc_replay
 
-ifarmBranch
+ifarmBranch- includes all kaonlt analysis scripts (besides SIMC in its entirety)
 
 Structure of directories should be...
 
