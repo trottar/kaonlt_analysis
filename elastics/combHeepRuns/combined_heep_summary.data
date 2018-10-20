@@ -1,0 +1,21 @@
+#List of Combined H(e,e'p) runs based on Kinematics on which HMS set to negative polarity
+#Runs Dated Dec.2017/Sping2018
+#ideal_P is the momentum required for elastics, given the angle and beam_e
+
+#UNITS: nmt_true [T],   nmr_P[GeV],  angle[deg], beam_e[GeV], ideal_P[GeV],  W_mean[GeV], W_mean_err[GeV],  W_sigma[GeV]
+
+#! kin_group[s,0]/	nmr_true[f,1]/	     nmr_P[f,2]/      angle[f,3]/      beam_e[f,4]/     ideal_P[f,5]/	     W_mean[f,6]/   W_mean_err[f,7]/    W_sigma[f,8]/ comments[s,7]/		
+   g1_singles           1.69735              6.1421           20.995           10.58794         6.05316       	     0.872    	    0.003	        0.1303      singles::Dipole-Sat-Tests
+   g2_singles		1.61524              5.8613           20.995           10.58794		6.05316        	     0.858	    0.0025	        0.0796      singles::Dipole-Sat-Tests
+   g3_singles		1.57217		     5.7134	      20.995	       10.58794		6.05316              0.893	    0.0011 	       	0.0832	    singles::Dipole-Sat-Tests
+   g1_singles_coin	0.583401	     2.131	      45.109	       6.430	        2.13166		     0.929	    0.0084 	       	0.0436	    singles_in_coin_mode
+   g2_singles_coin	0.81637		     2.982	      39.28	       10.58794		2.98285		     0.889	    0.0038 	       	0.0309	    singles_in_coin_mode
+   g3_singles_coin	1.52247		     5.5422	      23.189	       10.58794		5.5386		     0.864	    0.0013	 	0.0423	    singles_in_coin_mode
+   g1_coin		0.988186	     3.6096	      27.502	       6.430		3.6237		     0.912	    0.0002 	       	0.0191	    coin:hElec
+   g2_coin		0.988187	     3.6096	      27.511	       6.430		3.62269		     0.913	    0.0003 	       	0.0195	    coin:hElec
+   g3_coin		0.510311	     1.864	      50.002	       6.430		1.86476 	     0.924	    0.0010 	       	0.0246	    coin:hElec
+   g4_coin		0.583401	     2.131	      45.109	       6.430		2.13166		     0.924	    0.0003 	       	0.0209	    coin:hElec
+   g5_coin		1.51645		     5.5214	      23.189	       10.58794		5.5386		     0.853	    0.0007 	       	0.0359	    coin:hElec
+   g6_coin		0.816369	     2.982	      39.28	       10.58794		2.98285		     0.896	    0.0016	 	0.0486	    coin:hElec
+   g7_coin		1.22593		     4.478	      28.505	       10.58794		4.47133		     0.873	    0.0012	 	0.0424	    coin:hElec
+
