@@ -21,9 +21,11 @@ numEvts=-1
 
 #Which scripts to run
 script="get_EvtNum_${spec}.C"
+scriptPlots="plot_Stat_${spec}.C"
 
 #which commands to run
 runScript="root -l -b -q \"${script}(${runNum},${numEvts})\""
+runScriptPlots="root -l -b -q \"${scriptPlots}(${runNum},${numEvts})\""
 
 #Excecute 
 {
@@ -31,6 +33,7 @@ runScript="root -l -b -q \"${script}(${runNum},${numEvts})\""
 echo "Running ${script}"
 echo "Getting ${numEvts} number of events for run ${runNum} for ${SPEC}"
 eval ${runScript}
+eval ${runScriptPlots}
 sleep 2
 grep "Run #" ../REPORT_OUTPUT/${SPEC}/PRODUCTION/replay_hms_coin_elastics_${runNum}_${numEvts}.report >> outputGrep
 grep -i BCM4B ../REPORT_OUTPUT/${SPEC}/PRODUCTION/replay_hms_coin_elastics_${runNum}_${numEvts}.report >> outputGrep

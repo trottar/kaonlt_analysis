@@ -14,7 +14,7 @@ void get_EvtNum_shms(Int_t runNum = 0, Int_t numEvts = 0){
 
   TString spec = "shms";
 
-  TString rootfile = "../ROOTfiles/" + spec + "_coin_replay_production_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
+  TString rootfile = "../../ROOTfiles/" + spec + "_coin_replay_production_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
   // TString rootfile = "../mkjones/" + spec + "_matrixopt/ROOTfiles/" + spec + "_replay_matrixopt_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
   // TString rootfile = "ROOTfiles/" + spec + "_coin_replay_production_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
   TString outputhist;

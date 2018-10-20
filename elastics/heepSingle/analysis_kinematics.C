@@ -14,7 +14,7 @@ void analysis_kinematics(TString rootfile = ""){
   }
 
   TString outputhist;
-  outputhist = rootfile + ".root";
+  outputhist = "../../ROOTfiles" + rootfile + ".root";
   TString outputpdf;
   outputpdf = "OUTPUT/" + rootfile + ".pdf";
 
