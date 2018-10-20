@@ -1,0 +1,33 @@
+	program run_epc
+
+	implicit none
+
+	real Ebeam,P,theta,th,ztarg,ntarg
+	real sigma
+	real degrad !degrees to radians
+
+	integer ipart
+
+	parameter(degrad=0.017453292)
+
+	write(6,*) 'Enter beam energy'
+	read(5,*) Ebeam
+
+	write(6,*) 'Scattered particle momentum'
+	read(5,*) P
+
+	write(6,*) 'Scattering angle (in degrees)'
+	read(5,*) theta
+	th = theta*degrad
+
+	write(6,*) 'Enter particle (3=pi-,4=proton,5=pi+)'
+	read ipart
+	
+	write(6,*) 'NOTE: I am assuming a hyfdrogen target.'
+	write(6,*) 'If you want something else, learn some fortran.'
+
+	call epc(ebeam,p,th,1.0,0.0,ipart,sigma)
+
+	write(6,*) 'Cross section (nb/MeV/sr)',sigma
+
+	end
