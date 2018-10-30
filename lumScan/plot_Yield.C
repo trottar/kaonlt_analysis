@@ -23,7 +23,7 @@ void plot_Yield(Int_t numRuns = 0){
 	cout << "-> ";
   	cin >> targetType;
 
-  if(targetType==1)
+  if(targetType==1||targetType==2||targetType==3)
 	cout << " " << '\n';
 
   else{
@@ -189,8 +189,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 //Calculates yield for good cherenkov with and without track cuts
  
    	for(Int_t i=0;i<numRuns;i++){
-	  yield_HMS[i] = counts_HMS[i]/(charge[i]*cpuLT[i]*etrEff_HMS[i]*eLT_HMS[i]);
-	  yield_SHMS[i] = counts_SHMS[i]/(charge[i]*cpuLT[i]*hadtrEff_SHMS[i]*eLT_SHMS[i]);
+	  yield_HMS[i] = (counts_HMS[i]*ps3[i])/(charge[i]*cpuLT[i]*etrEff_HMS[i]*eLT_HMS[i]);
+	  yield_SHMS[i] = (counts_SHMS[i]*ps1[i])/(charge[i]*cpuLT[i]*hadtrEff_SHMS[i]*eLT_SHMS[i]);
 	}
 
    cout << "\nPlotting Run Numbers..." << "\n\n";
@@ -202,8 +202,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
   	yieldRel_HMS[i] = yield_HMS[i]/yield_HMS[numRuns-1];
   	yieldRel_SHMS[i] = yield_SHMS[i]/yield_SHMS[numRuns-1];
 
-	uncerEvts_HMS[i]= yield_HMS[i]/TMath::Sqrt(counts_HMS[i]);
-	uncerEvts_SHMS[i]= yield_SHMS[i]/TMath::Sqrt(counts_SHMS[i]);
+	uncerEvts_HMS[i]= yield_HMS[i]/(TMath::Sqrt(counts_HMS[i])*ps3[i]);
+	uncerEvts_SHMS[i]= yield_SHMS[i]/(TMath::Sqrt(counts_SHMS[i])*ps1[i]);
   	//uncerEvts[i] = 0;
 
   	cout << runNumber[i] << " ";
@@ -289,8 +289,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    
    // values for controlling format
    const string sep = " |" ;
-   const int total_width = 154;
-   const string tab = sep + string( total_width-1, '-' ) + '|' ;
+   const int total_width = 267;
+   const string tab = string( total_width, '-' ) + '|' ;
 
 //Creates a table with various variables listed below  
 
@@ -299,19 +299,25 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    myfile.open ("OUTPUT/LuminosityScans.txt", fstream::app);
 
     	myfile << tab << '\n'
-    	       << setw(12) << "-> Applied Cuts: [Applied Cuts:[[CerSum>2.0, Ecal>0.7, Ecal<1.5, |Hms delta|<8]]" << '\n'
+    	       << setw(12) << "|Target " << target << "| Run Numbers " << runNumber[0] << "-" << runNumber[numRuns-1] << "| " 
+	       << tab << '\n' << sep
+	       << setw(12) << "-> Applied Cuts HMS: [Applied Cuts:[[Beta>0.8, Beta<1.3, Ecal>0.6, Ecal<2.0, CerSum>0.5, |Hms delta|<8]]" << '\n'
+    	       << tab << '\n' << sep
+	       << setw(12) << "-> Applied Cuts SHMS: [Applied Cuts:[[Beta>0.5, Beta<1.4, Ecal>0.05, Ecal<0.6, HGnpeSum<1.5, AeornpeSum<1.5, Shms delta>-10, Shms delta<20]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
   	       << setw(12) << left << "Current" << sep
   	       << setw(12) << left << "BeamTime" << sep
   	       << setw(12) << left << "Charge" << sep
   	       << setw(12) << left << "HMS count" << sep
+  	       << setw(12) << left << "PS3" << sep
   	       << setw(12) << left << "Yield_HMS" << sep
   	       << setw(12) << left << "RelY_HMS" << sep 
   	       << setw(12) << left << "eLT_HMS" << sep
   	       << setw(12) << left << "TrEff_HMS" << sep
  	       << setw(12) << left << "Uncer_HMS" << sep 
   	       << setw(12) << left << "SHMS count" << sep
+  	       << setw(12) << left << "PS1" << sep
 	       << setw(12) << left << "Yield_SHMS" << sep
   	       << setw(12) << left << "RelY_SHMS" << sep 
   	       << setw(12) << left << "eLT_SHMS" << sep
@@ -325,12 +331,14 @@ cout << "\n`````````````````````````````````````````````````````````````````````
   	       << setw(12) << time[i] << sep
   	       << setw(12) << charge[i] << sep
   	       << setw(12) << counts_HMS[i] << sep
+  	       << setw(12) << left << ps3[i] << sep
   	       << setw(12) << yield_HMS[i] << sep
   	       << setw(12) << yieldRel_HMS[i] << sep
   	       << setw(12) << eLT_HMS[i] << sep
   	       << setw(12) << etrEff_HMS[i] << sep
  	       << setw(12) << uncerEvts_HMS[i] << sep
    	       << setw(12) << counts_SHMS[i] << sep
+  	       << setw(12) << left << ps1[i] << sep
   	       << setw(12) << yield_SHMS[i] << sep
   	       << setw(12) << yieldRel_SHMS[i] << sep
   	       << setw(12) << eLT_SHMS[i] << sep
