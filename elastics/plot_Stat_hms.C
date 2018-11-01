@@ -14,7 +14,9 @@ void plot_Stat_hms(Int_t runNum = 0, Int_t numEvts = 0){
 
   TString spec = "hms";
 
-  TString rootfile = "../../ROOTfiles/" + spec + "_coin_replay_elastics_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
+
+  TString rootfile = "../../ROOTfiles/KaonLT_coin_replay_production_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
+  //TString rootfile = "../../ROOTfiles/" + spec + "_coin_replay_elastics_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
   // TString rootfile = "../mkjones/" + spec + "_matrixopt/ROOTfiles/" + spec + "_replay_matrixopt_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
   // TString rootfile = "ROOTfiles/" + spec + "_coin_replay_production_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
 
@@ -93,13 +95,13 @@ void plot_Stat_hms(Int_t runNum = 0, Int_t numEvts = 0){
   c1->Print(outputpdf+"(");
   //c1->cd(2);
   h2->Draw("Colz");
-  c2->Print(outputpdf);
+  c2->Print(outputpdf+ ")");
   //c1->cd(3);
-  h3->Draw("Colz");
-  c3->Print(outputpdf);
+  //h3->Draw("Colz");
+  //c3->Print(outputpdf);
   //c1->cd(4);
-  h4->Draw("Colz");
-  c4->Print(outputpdf+")");
+  //h4->Draw("Colz");
+  //c4->Print(outputpdf+")");
 
   //c1->Print("OUTPUT/pngFiles" + spec + "_statsPlots_" + Form("%i",(int)runNum) + ".png");
 
