@@ -1,0 +1,25 @@
+Here is a summary of the files in this directory...
+
+run_EvtNum_${spec}.sh is a bash file that reads in a string of run numbers from "inputRuns" then 
+will run the scripts get_EvtNum_${spec}.C and plot_Stat_${spec}.C as well as produce an output 
+file "outputGrep" which contains the run number and BCM4B charge.
+
+get_EvtNum_${spec}.C will read in a root file to produce a fit around the peak of the  invariant 
+value W^2. this outputs as a .png file and records the run number, spectrometer and integrates 
+the W^2 peak to obtain the number of events in "numEvts_${spec}.txt".
+
+plot_Stat_${spec}.C will read in a root file and output a .pdf which contains plots for the
+xfp vs. yfp and xptar vs. yptar.
+
+**Currently the read in root files are ones I have made, which are under my 
+volatile/hallc/spring17/ROOTfiles/ directory. These root files are created by my run_Replay.sh
+bash file in my hallc_replay_cdaq repo.
+
+"inputRuns" are the string of run numbers described above.
+
+The subdirectory OUTPUT is where the .pdf, .png, "outputGrep", and "numEvts_hms.txt" are located.
+With the .png files having their own subdirectory
+
+The subdirectory carlosFiles are scripts and plots provided to me by Carlos Yero, these are mostly 
+for the Spring 2018 SIDIS runs. The exception is get_elastic.C which can calculate elastic values.
+This is very useful.
