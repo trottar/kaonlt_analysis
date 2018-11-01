@@ -206,6 +206,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    	for(Int_t i=0;i<numRuns;i++){
 	  yield_HMS[i] = (counts_HMS[i]*ps3[i])/(charge[i]*cpuLT[i]*etrEff_HMS[i]);
 	  yield_SHMS[i] = (counts_SHMS[i]*ps1[i])/(charge[i]*cpuLT[i]*hadtrEff_SHMS[i]);
+
+
 	}
 
    cout << "\nPlotting Run Numbers..." << "\n\n";
@@ -399,13 +401,13 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    myfile.open ("OUTPUT/LuminosityScans.txt", fstream::app);
 
     	myfile << tab << '\n'
-    	       << " |Target " << target << "| Run Numbers ";
+    	       << " |Rates, Target " << target << "| Run Numbers ";
 
 	for(Int_t i=0;i<numRuns-1;i++)
 	  myfile << runNumber[i] << ", ";
 
 	myfile << runNumber[numRuns-1] << "| " << '\n'
-	       << setw(12) << "-> Applied Cuts HMS: [Applied Cuts:[[Beta>0.8, Beta<1.3, Ecal>0.6, Ecal<2.0, CernpeSum>0.5, |Hms delta|<8]]" << '\n'
+	       << setw(12) << "-> Applied Cuts HMS: [Applied Cuts:[[Beta>0.8, Beta<1.3, Ecal>0.6, Ecal<2.0, CernpeSum>0.5, |Hms delta|<8, xptar>0.08 , yptar>0.035]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
   	       << setw(12) << left << "Current" << sep
@@ -445,7 +447,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 
 
 	myfile << tab << '\n' << sep
-	       << setw(12) << "-> Applied Cuts SHMS: [Applied Cuts:[[Beta>0.5, Beta<1.4, Ecal>0.05, Ecal<0.6, HGnpeSum<1.5, AeornpeSum<1.5, Shms delta>-10, Shms delta<20]]" << '\n'
+	       << setw(12) << "-> Applied Cuts SHMS: [Applied Cuts:[[Beta>0.5, Beta<1.4, Ecal<0.6, HGnpeSum<1.5, AeornpeSum<1.5, Shms delta>-10, Shms delta<20, xptar>0.08 , yptar>0.035]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
   	       << setw(12) << left << "Current" << sep
@@ -489,7 +491,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 
 
 //Prints an image file of the plot
-   c1->Print("OUTPUT/" + foutname + target + Form("_%i",runNumber[0]) + Form("-%i",runNumber[numRuns-1]) + ".png");
+   c1->Print("OUTPUT/" + foutname + target + Form("_%i",runNumber[0]) + Form("-%i",runNumber[numRuns-1]) + "_rates.png");
 
    return;
 
