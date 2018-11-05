@@ -16,6 +16,9 @@ do
 #Run number
 runNum=$line
 
+#Output file
+output=${rtype}_${runNum}.out
+
 
 {
 echo "Running ${batch} for ${runNum}"
@@ -29,11 +32,10 @@ echo "JOBNAME: ${rtype}_${runNum}" >> ${batch}
 echo "MEMORY: 2000 MB" >> ${batch}
 echo "OS: centos7" >> ${batch}
 echo "CPU: 1" >> ${batch}
-#echo "INPUT_FILES:/home/trottar/ResearchNP/ROOTAnalysis/kaonlt_analysis/${rtype}/inputRuns" >> ${batch}
 echo "COMMAND:/home/trottar/Analysis/hallc_replay/run_Replay_${rtype}.sh ${runNum}" >> ${batch}
-#echo "OTHER_FILES: /home/trottar/Analysis/hallc_replay/run_Replay_${rtype}.sh" >> ${batch}
-echo "OUTPUT_DATA: ${rtype}_${runNum}.out" >> ${batch}
-echo "OUTPUT_TEMPLATE: /home/trottar/batchAnalysis/${rtype}_${runNum}.out" >> ${batch}
+echo "COMMAND: ls -alF > ${output}" 
+echo "OUTPUT_DATA: ${output}" >> ${batch}
+echo "OUTPUT_TEMPLATE: /home/trottar/ResearchNP/ROOTAnalysis/kaonlt_analysis/batch_OUTPUT/${rtype}_${runNum}.out" >> ${batch}
 echo "MAIL: trotta@cua.edu" >> ${batch}
 
 echo "Submitting batch"
