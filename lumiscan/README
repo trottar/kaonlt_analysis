@@ -1,0 +1,12 @@
+Here is a summary of the files in this directory...
+
+plot_Yield.C reads in input file "yieldVar" which is just a copy of Yield_Data.dat in the hallc_replay_cdaq 
+repo directory UTIL_KAONLT/scripts_Luminosity where these input files are calculated. With this input file 
+plots of the relative yield for luminosity scans are created along with a clean table of various variables.
+
+runInputs are a string of luminosity runs used for run_Replay_lumiscan.sh in the repo hallc_replay_cdaq
+which is a bash file that will run the replays and create root files for analysis
+
+The subdirectory OUTPUT is where the luminosity table "LuminosityScans.txt" is located along with the plots.
+
+The subdirectory misc are old scripts, files and plots.

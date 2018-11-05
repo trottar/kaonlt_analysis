@@ -1,0 +1,10 @@
+PROJECT: e01011
+TRACK: debug
+JOBNAME: elastics_4822
+MEMORY: 2000 MB
+OS: centos7
+CPU: 1
+COMMAND:/home/trottar/Analysis/hallc_replay/run_Replay_elastics.sh 4822
+OUTPUT_DATA: elastics_4822.out
+OUTPUT_TEMPLATE: /home/trottar/batchAnalysis/elastics_4822.out
+MAIL: trotta@cua.edu
