@@ -1,0 +1,35 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Errors...
+ 
+In file included from input_line_13:1:
+/u/home/trottar/Analysis/hallc_replay/./UTIL_KAONLT/scripts_Replay/replay_production_coin.C:14:7: warning: expression result unused [-Wunused-value]
+      exit;
+      ^~~~
+Error in <THaFormula::Compile>:  Bad numerical expression : ":SHMSaerogelgainfatorsfromLH2production4965"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Job info...
+ 
+
+Auger JobId: 59734925 [PBS JobId: 45534728]
+
+11/06/2018 21:18:33  A     Name=elastics_4798;User=trottar;queue=priority
+11/06/2018 21:19:03  A     Stagin started
+11/06/2018 21:19:03  A     Job started
+11/06/2018 21:19:41  A     Job started
+11/06/2018 21:19:41  A     Job completed
+
+Job: 45534728.farmpbs14
+
+11/06/2018 21:18:55  S    enqueuing into priority, state 2 hop 1
+11/06/2018 21:18:55  S    Holds u released at request of trottar@farmpbs14
+11/06/2018 21:18:55  A    queue=priority
+11/06/2018 21:19:01  S    Job Run at request of root@farmpbs14
+11/06/2018 21:19:01  A    user=trottar group=enp account=hallc jobname=elastics_4798 queue=priority ctime=1541557135 qtime=1541557135 etime=1541557135 start=1541557141 owner=trottar@farmpbs14 exec_host=farm13017/10+farm13017/11 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2000mb Resource_List.walltime=04:00:00 
+11/06/2018 21:19:43  S    Exit_status=0 resources_used.cput=00:00:17 resources_used.mem=33416kb resources_used.vmem=811168kb resources_used.walltime=00:00:42
+11/06/2018 21:19:43  S    on_job_exit valid pjob: 45534728.farmpbs14 (substate=50)
+11/06/2018 21:19:43  S    dequeuing from priority, state COMPLETE
+11/06/2018 21:19:43  A    user=trottar group=enp account=hallc jobname=elastics_4798 queue=priority ctime=1541557135 qtime=1541557135 etime=1541557135 start=1541557141 owner=trottar@farmpbs14 exec_host=farm13017/10+farm13017/11 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2000mb Resource_List.walltime=04:00:00 session=27074 end=1541557183 Exit_status=0 resources_used.cput=00:00:17 resources_used.mem=33416kb resources_used.vmem=811168kb resources_used.walltime=00:00:42
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
