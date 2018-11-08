@@ -1,4 +1,4 @@
-#! /bin/bash
+0;66;55M3;66;55m#! /bin/bash
 
 #Which spectrometer 
 spec=${0##*_}

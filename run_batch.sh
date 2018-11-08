@@ -16,14 +16,14 @@ i=-1
 (
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
-    echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo "Run number read from file: $line"
     echo ""
     #Run number
     runNum=$line
     tmp=tmp 
     numlines=$(eval "wc -l < ${inputFile}")
-    echo "Job $(( $i + 1 ))/$numlines"    
+    echo "Job $(( $i + 2 ))/$(( $numlines +1 ))"    
     echo "Running ${batch} for ${runNum}"
     cp /dev/null ${batch}    
     echo "PROJECT: e01011" >> ${batch}
@@ -55,6 +55,8 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
     #echo "${augerID[@]}"
     echo "${rnum[$i]} has an AugerID of ${augerID[$i]}" 
     if [ $i == $numlines ]; then
+	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+	echo " "
 	echo "###############################################################################################################"
 	echo "############################################ END OF JOB SUBMISSIONS ###########################################"
 	echo "###############################################################################################################"
@@ -68,48 +70,58 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 	#echo "${augerID[@]}"
 	while [  $(eval "wc -l < ${tmp}") != 1 ]; do
 	    cp /dev/null ${tmp}
-	    echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"  
+	    echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"  
 	    eval "jobstat -u trottar 2>/dev/null"
 	    eval "jobstat -u trottar 2>/dev/null" > ${tmp}
 	    echo " "  
-	    echo "There are $(( $(eval "wc -l < ${tmp}") - 1 )) jobs remaining"
+	    if [ $(( $(eval "wc -l < ${tmp}") - 1 )) = 1 ]; then
+		echo "There is $(( $(eval "wc -l < ${tmp}") - 1 )) job remaining"
+	    else
+		echo "There are $(( $(eval "wc -l < ${tmp}") - 1 )) jobs remaining"
+	    fi
 	    sleep 10
 	done
 	l=-1
-	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"  
+	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"  
 	sleep 30
 	for j in "${augerID[@]}"
 	do
 	    l=$(( $l + 1 ))
 	    output=${rtype}_${rnum[$l]}.out
-	    check="/home/trottar/.farm_out/${rtype}_${rnum[$l]}.$j.err"
+	    check="/home/trottar/.farm_out/${rtype}_${rnum[$l]}.$j.err"	   
 	    #echo "error file is $check"
 	    if [ -e "$check" ]; then
-		echo "ID-$j (run ${rnum[$l]}) is ready to print to file"
-		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
-		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
+		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
+		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
 		echo "Errors..." >> ${output}
 		echo " " >> ${output}
 		cat /home/trottar/.farm_out/${rtype}_${rnum[$l]}.$j.err >> ${output}
-		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
+		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
 		echo "Job info..." >> ${output}
 		echo " " >> ${output}
 		eval "jobinfo $j 2>/dev/null" >> ${output}
-		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
-		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
+		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
+		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" >> ${output}
 		mv ${output} batch_OUTPUT/
+		memused[$l]=$(cut -d "=" -f2 <<< $(grep -oh -m 1 "\w*resources_used.vmem=\w*" batch_OUTPUT/${output}))
+		memlist[$l]=$(cut -d "=" -f2 <<< $(grep -oh -m 1 "\w*Resource_List.vmem=\w*" batch_OUTPUT/${output}))
+		echo "_"
+		echo "|ID-$j (run ${rnum[$l]}) has printed batch job information to file"
+		echo "|Amount of allocated memory used: ${memused[$l]}/${memlist[$l]}"
 	    else
-		echo "File not found [ID-$j]"		      
+		echo "Batch job information not found [ID-$j]"		      
 	    fi
 	done	
     fi
     cp /dev/null ${tmp}
+ 
 
 done < "$inputFile"
 
 ) 2>&1 | tee ${historyfile}
 
 mv ${historyfile} batch_OUTPUT/
+
 
 echo ""
 echo "###############################################################################################################"
