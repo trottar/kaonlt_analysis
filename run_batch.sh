@@ -1,36 +1,39 @@
 #! /bin/bash
 
-#Run type (e.g. elastics? lumiscan?)
+##Run type (e.g. elastics,lumiscan,production)##
 rtype=$1
 
-#Output file
+##Output history file##
 historyfile=hist_${rtype}.$( date "+%Y-%m-%d_%H-%M-%S" ).log
 
-#output batch script
+##Output batch script##
 batch="trotta_${rtype}Job.txt"
 
-#Input run numbers
+##Input run numbers##
 inputFile="/home/trottar/ResearchNP/ROOTAnalysis/kaonlt_analysis/${rtype}/inputRuns"
-i=-1
 
+i=-1
 (
 
+##Reads in input file##
 while IFS='' read -r line || [[ -n "$line" ]]; do
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     echo "Run number read from file: $line"
     echo ""
-    #Run number
+    ##Run number#
     runNum=$line
     tmp=tmp 
+    ##Finds number of lines of input file##
     numlines=$(eval "wc -l < ${inputFile}")
     echo "Job $(( $i + 2 ))/$(( $numlines +1 ))"    
     echo "Running ${batch} for ${runNum}"
     cp /dev/null ${batch}    
+    ##Creation of batch script for submission##
     echo "PROJECT: e01011" >> ${batch}
-    #echo "TRACK: analysis" >> ${batch}
-    echo "TRACK: debug" >> ${batch}
+    echo "TRACK: analysis" >> ${batch}
+    #echo "TRACK: debug" >> ${batch}
     echo "JOBNAME: ${rtype}_${runNum}" >> ${batch}
-    echo "MEMORY: 2000 MB" >> ${batch}
+    echo "MEMORY: 2500 MB" >> ${batch}
     echo "OS: centos7" >> ${batch}
     echo "CPU: 2" >> ${batch}
     #echo "TIME: 1" >> ${batch}
@@ -41,10 +44,12 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
     echo " "
     i=$(( $i + 1 ))
     string=$(cat ${inputFile} |tr "\n" " ")
+    ##Converts input file to an array##
     rnum=($string)
     #echo "array is ${rnum[@]}"   
     #eval "jobstat -u trottar 2>/dev/null"
-    eval "jobstat -u trottar 2>/dev/null" > ${tmp}   
+    eval "jobstat -u trottar 2>/dev/null" > ${tmp} 
+    ##Loop to find ID number of each run number##
     for j in "${rnum[@]}"
     do
 	if [ $(grep -c $j ${tmp}) -gt 0 ]; then
@@ -62,14 +67,17 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 	echo "###############################################################################################################"
 	echo " "	
 	k=-1
+	##Prints all ID numbers##
       	for j in "${augerID[@]}"
 	do
 	    k=$(( $k + 1 ))
 	    echo "${rnum[$k]} has an AugerID of $j"
 	done
 	#echo "${augerID[@]}"
+	##While there are jobs still remaining it will print all jobs status every 30 seconds##
 	while [  $(eval "wc -l < ${tmp}") != 1 ]; do
 	    cp /dev/null ${tmp}
+	    sleep 30
 	    echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"  
 	    eval "jobstat -u trottar 2>/dev/null"
 	    eval "jobstat -u trottar 2>/dev/null" > ${tmp}
@@ -79,11 +87,11 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 	    else
 		echo "There are $(( $(eval "wc -l < ${tmp}") - 1 )) jobs remaining"
 	    fi
-	    sleep 10
 	done
 	l=-1
 	echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"  
 	sleep 30
+	##For each run it checks that the .err file has been made and copies it to another file along with job info##
 	for j in "${augerID[@]}"
 	do
 	    l=$(( $l + 1 ))
@@ -118,12 +126,13 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 
 done < "$inputFile"
 
+##All output text in terminal is copied to a file##
 ) 2>&1 | tee ${historyfile}
+
+echo ""
 
 mv ${historyfile} batch_OUTPUT/
 
-
-echo ""
 echo "###############################################################################################################"
 echo "############################################# ALL JOBS COMPLETED ##############################################"
 echo "###############################################################################################################"

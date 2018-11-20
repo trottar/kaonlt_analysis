@@ -1,0 +1,31 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Errors...
+ 
+Error in <THaFormula::Compile>:  Bad numerical expression : ":SHMSaerogelgainfatorsfromLH2production4965"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Job info...
+ 
+
+Auger JobId: 59876866 [PBS JobId: 45673984]
+
+11/11/2018 17:09:12  A     Name=lumiscan_5160;User=trottar;queue=prod64
+11/11/2018 17:10:50  A     Stagin started
+11/11/2018 17:10:50  A     Job started
+11/11/2018 18:16:15  A     Job started
+11/11/2018 18:16:16  A     Job completed
+
+Job: 45673984.farmpbs14
+
+11/11/2018 17:10:42  S    enqueuing into prod64, state 2 hop 1
+11/11/2018 17:10:42  S    Holds u released at request of trottar@farmpbs14
+11/11/2018 17:10:42  A    queue=prod64
+11/11/2018 17:10:47  S    Job Run at request of root@farmpbs14
+11/11/2018 17:10:47  A    user=trottar group=enp account=hallc jobname=lumiscan_5160 queue=prod64 ctime=1541974242 qtime=1541974242 etime=1541974242 start=1541974247 owner=trottar@farmpbs14 exec_host=farm180216/64+farm180216/65 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=2000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=4000mb Resource_List.walltime=24:00:00 
+11/11/2018 18:16:21  S    Exit_status=0 resources_used.cput=01:05:23 resources_used.mem=1180048kb resources_used.vmem=1952620kb resources_used.walltime=01:05:32
+11/11/2018 18:16:21  S    on_job_exit valid pjob: 45673984.farmpbs14 (substate=50)
+11/11/2018 18:16:21  A    user=trottar group=enp account=hallc jobname=lumiscan_5160 queue=prod64 ctime=1541974242 qtime=1541974242 etime=1541974242 start=1541974247 owner=trottar@farmpbs14 exec_host=farm180216/64+farm180216/65 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=2000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=4000mb Resource_List.walltime=24:00:00 session=169186 end=1541978181 Exit_status=0 resources_used.cput=01:05:23 resources_used.mem=1180048kb resources_used.vmem=1952620kb resources_used.walltime=01:05:32
+11/11/2018 18:16:26  S    dequeuing from prod64, state COMPLETE
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

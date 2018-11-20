@@ -7,13 +7,10 @@ void plot_Yield(Int_t numRuns = 0){
 
   	if(numRuns==0){
 		cerr << "Invalid entry\n";
-		exit;
+		//exit;
 
   	}
   }
-
-
-  // cout << "\n~~~~~~~PLEASE MAKE SURE READ IN FILE IS IN NUMERICAL ORDER!~~~~~~~\n";
 
 //User selection of target
   Int_t targetType;  
@@ -219,11 +216,11 @@ cout << "\n`````````````````````````````````````````````````````````````````````
   	yieldRel_HMS[i] = yield_HMS[i]/yield_HMS[0];
   	yieldRel_SHMS[i] = yield_SHMS[i]/yield_SHMS[0];
 
-	uncerEvts_HMS[i]= yield_HMS[i]/((TMath::Sqrt(counts_HMS[i]))*ps3[i]);
-	uncerEvts_SHMS[i]= yield_SHMS[i]/((TMath::Sqrt(counts_SHMS[i]))*ps1[i]);
+	uncerEvts_HMS[i] = (TMath::Sqrt(counts_HMS[i]))/(counts_HMS[i]);
+	uncerEvts_SHMS[i] = (TMath::Sqrt(counts_SHMS[i]))/(counts_SHMS[i]);
   	//uncerEvts[i] = 0;
 
-  	cout << runNumber[i] << " ";
+  	cout << runNumber[i] << "| ";
    }
 
    TString target;
@@ -297,7 +294,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    p1a->Draw();
    p1a->cd();
 
-   gr1a->Draw("P");
+   //gr1a->Draw("P");
    gPad->Update();
    
    TGaxis *a1 = new TGaxis(xmin1, ymax1, xmax1, ymax1, xmin1, xmax1, 510, "-L");
@@ -305,7 +302,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    a1->SetTitleColor(2);
    a1->SetLabelColor(2);
    a1->SetNdivisions(6);
-   a1->Draw();
+   //a1->Draw();
    gPad->Update();
 
    TLine *l = new TLine(xmin1,1.,xmax1,1.);
@@ -369,7 +366,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    p2a->Draw();
    p2a->cd();
 
-   gr2a->Draw("P");
+   //gr2a->Draw("P");
    gPad->Update();
    
    TGaxis *a2 = new TGaxis(xmin2, ymax2, xmax2, ymax2, xmin2, xmax2, 510, "-L");
@@ -377,7 +374,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    a2->SetTitleColor(2);
    a2->SetLabelColor(2);
    a2->SetNdivisions(6);
-   a2->Draw();
+   //a2->Draw();
    gPad->Update();
 
    TLine *l2 = new TLine(xmin2,1.,xmax2,1.);
@@ -398,16 +395,17 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 
 
 
-   myfile.open ("OUTPUT/LuminosityScans.txt", fstream::app);
+   myfile.open("/home/trottar/ResearchNP/ROOTAnalysis/kaonlt_analysis/lumiscan/OUTPUT/LuminosityScans.txt", fstream::app);
 
     	myfile << tab << '\n'
-    	       << " |Rates, Target " << target << "| Run Numbers ";
+    	       << " |More cuts without beta, coinTDC > 0 , Target " << target << "| Run Numbers ";
 
 	for(Int_t i=0;i<numRuns-1;i++)
 	  myfile << runNumber[i] << ", ";
 
 	myfile << runNumber[numRuns-1] << "| " << '\n'
-	       << setw(12) << "-> Applied Cuts HMS: [Applied Cuts:[[Beta>0.8, Beta<1.3, Ecal>0.6, Ecal<2.0, CernpeSum>0.5, |Hms delta|<8, xptar>0.08 , yptar>0.035]]" << '\n'
+	  // << setw(12) << "-> Applied Cuts HMS: [[Beta>0.8, Beta<1.3, Ecal>0.6, Ecal<2.0, CernpeSum>0.5, |Hms delta|<8, xptar>0.08 , yptar>0.035]]" << '\n'
+	       << setw(12) << "-> Applied Cuts HMS: [[Ecal>0.6, Ecal<2.0, |Hms delta|<8, xptar>0.08 , yptar>0.035]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
   	       << setw(12) << left << "Current" << sep
@@ -447,7 +445,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 
 
 	myfile << tab << '\n' << sep
-	       << setw(12) << "-> Applied Cuts SHMS: [Applied Cuts:[[Beta>0.5, Beta<1.4, Ecal<0.6, HGnpeSum<1.5, AeornpeSum<1.5, Shms delta>-10, Shms delta<20, xptar>0.08 , yptar>0.035]]" << '\n'
+	  //   << setw(12) << "-> Applied Cuts SHMS: [[Beta>0.5, Beta<1.4, Ecal<0.6, HGnpeSum<1.5, AeornpeSum<1.5, Shms delta>-10, Shms delta<20, xptar>0.08 , yptar>0.035]]" << '\n'
+	       << setw(12) << "-> Applied Cuts SHMS: [[Ecal<0.6, Shms delta>-10, Shms delta<20, xptar>0.08 , yptar>0.035]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
   	       << setw(12) << left << "Current" << sep
@@ -491,7 +490,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 
 
 //Prints an image file of the plot
-   c1->Print("OUTPUT/" + foutname + target + Form("_%i",runNumber[0]) + Form("-%i",runNumber[numRuns-1]) + "_rates.png");
+   c1->Print("OUTPUT/" + foutname + target + Form("_%i",runNumber[0]) + Form("-%i",runNumber[numRuns-1]) + ".png");
 
    return;
 

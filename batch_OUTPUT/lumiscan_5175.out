@@ -1,0 +1,31 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Errors...
+ 
+Error in <THaFormula::Compile>:  Bad numerical expression : ":SHMSaerogelgainfatorsfromLH2production4965"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Job info...
+ 
+
+Auger JobId: 59876876 [PBS JobId: 45673994]
+
+11/11/2018 17:10:07  A     Name=lumiscan_5175;User=trottar;queue=prod64
+11/11/2018 17:10:59  A     Stagin started
+11/11/2018 17:10:59  A     Job started
+11/11/2018 18:43:15  A     Job started
+11/11/2018 18:43:15  A     Job completed
+
+Job: 45673994.farmpbs14
+
+11/11/2018 17:10:43  S    enqueuing into prod64, state 2 hop 1
+11/11/2018 17:10:43  S    Holds u released at request of trottar@farmpbs14
+11/11/2018 17:10:43  A    queue=prod64
+11/11/2018 17:10:58  S    Job Run at request of root@farmpbs14
+11/11/2018 17:10:58  A    user=trottar group=enp account=hallc jobname=lumiscan_5175 queue=prod64 ctime=1541974243 qtime=1541974243 etime=1541974243 start=1541974258 owner=trottar@farmpbs14 exec_host=farm180215/36+farm180215/37 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=2000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=4000mb Resource_List.walltime=24:00:00 
+11/11/2018 18:43:18  S    Exit_status=0 resources_used.cput=01:32:15 resources_used.mem=1581028kb resources_used.vmem=2399676kb resources_used.walltime=01:32:19
+11/11/2018 18:43:18  S    on_job_exit valid pjob: 45673994.farmpbs14 (substate=50)
+11/11/2018 18:43:18  S    dequeuing from prod64, state COMPLETE
+11/11/2018 18:43:18  A    user=trottar group=enp account=hallc jobname=lumiscan_5175 queue=prod64 ctime=1541974243 qtime=1541974243 etime=1541974243 start=1541974258 owner=trottar@farmpbs14 exec_host=farm180215/36+farm180215/37 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=2000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=4000mb Resource_List.walltime=24:00:00 session=315123 end=1541979798 Exit_status=0 resources_used.cput=01:32:15 resources_used.mem=1581028kb resources_used.vmem=2399676kb resources_used.walltime=01:32:19
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
