@@ -1,0 +1,64 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 4786
+
+Job 1/1
+Running trotta_elasticsJob.txt for 4786
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>29389793</index><jobIndex>60485294</jobIndex></request></jsub>
+ 
+4786 has an AugerID of 60485294
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+###############################################################################################################
+############################################ END OF JOB SUBMISSIONS ###########################################
+###############################################################################################################
+ 
+4786 has an AugerID of 60485294
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+60485294  trottar     A    prod64      --         ...lastics_4786   Nov 28 14:13  --         --         hallc     
+ 
+There is 1 job remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+60485294  trottar     A    prod64      --         ...lastics_4786   Nov 28 14:13  --         --         hallc     
+ 
+There is 1 job remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+ 
+There are 0 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_
+|ID-60485294 (run 4786) has printed batch job information to file
+|Amount of allocated memory used: 1843656kb/2500mb
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 
+
+Job 2/31
+Running trotta_elasticsJob.txt for 
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>29389794</index><jobIndex>60485295</jobIndex></request></jsub>
+ 
+4789 has an AugerID of 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 4789
+
+Job 3/31
+Running trotta_elasticsJob.txt for 4789
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>29389795</index><jobIndex>60485296</jobIndex></request></jsub>
+ 
+4791 has an AugerID of 60485296
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 4791
+
+Job 4/31
+Running trotta_elasticsJob.txt for 4791
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>29389796</index><jobIndex>60485297</jobIndex></request></jsub>
+ 

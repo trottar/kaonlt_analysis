@@ -52,18 +52,20 @@ void plot_Yield(Int_t numRuns = 0){
     Double_t SHMS_ptrack;                                                                                    
     Double_t SHMS_ptrackun;
     Double_t ACC_EDTM;
+    Double_t TRIG1_cut;
+    Double_t TRIG3_cut;
     Double_t PS1;
     Double_t PS3;
     Double_t TIME;
     Double_t BCM4B;
-    Double_t TRIG1;
-    Double_t TRIG3;
-    Double_t comp_time;                                                                                
-    Double_t comp_uncer;                                                                               
-    Double_t HMS_elec;                                                                                
-    Double_t HMS_elecun;                                                                               
-    Double_t SHMS_elec;                                                                                
-    Double_t SHMS_elecun;
+    Double_t pTRIG1;
+    Double_t pTRIG3;
+    //Double_t comp_time;                                                                                
+    //Double_t comp_uncer;                                                                               
+    //Double_t HMS_elec;                                                                                
+    //Double_t HMS_elecun;                                                                               
+    //Double_t SHMS_elec;                                                                                
+    //Double_t SHMS_elecun;
     Double_t SENT_EDTM;
   };                                                                                                  
                                                                                                         
@@ -77,7 +79,8 @@ void plot_Yield(Int_t numRuns = 0){
   Double_t time[numRuns];
   Double_t current[numRuns];
   Double_t cpuLT[numRuns];
-  Double_t cpuLT_uncer[numRuns];  
+  Double_t cpuLT_uncer[numRuns]; 
+  Double_t scalEDTM[numRuns];
 
   Double_t counts_HMS[numRuns];
   Double_t counts_HMS_uncer[numRuns];
@@ -85,6 +88,8 @@ void plot_Yield(Int_t numRuns = 0){
   Double_t eLT_HMS_uncer[numRuns];
   Double_t etrEff_HMS[numRuns];
   Double_t etrEff_HMS_uncer[numRuns];
+  Double_t ptrig3[numRuns];
+  Double_t tdc_trig3[numRuns];
   Double_t ps3[numRuns];
 
   Double_t counts_SHMS[numRuns];
@@ -93,6 +98,8 @@ void plot_Yield(Int_t numRuns = 0){
   Double_t eLT_SHMS_uncer[numRuns];
   Double_t hadtrEff_SHMS[numRuns];
   Double_t hadtrEff_SHMS_uncer[numRuns];
+  Double_t ptrig1[numRuns];
+  Double_t tdc_trig1[numRuns];
   Double_t ps1[numRuns];
 
 
@@ -118,7 +125,7 @@ void plot_Yield(Int_t numRuns = 0){
       }
     else
       {                                                                                             
-	sscanf(&line[0],"%d %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf",
+	sscanf(&line[0],"%d %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %lf",
 	       &input.run_num,
 	       &input.HMS_EVENTS,
 	       &input.HMS_EVENTSun,
@@ -139,18 +146,20 @@ void plot_Yield(Int_t numRuns = 0){
 	       &input.SHMS_ptrack,
 	       &input.SHMS_ptrackun,
 	       &input.ACC_EDTM,
+	       &input.TRIG1_cut,
+	       &input.TRIG3_cut,
 	       &input.PS1,
 	       &input.PS3,
 	       &input.TIME,
 	       &input.BCM4B,
-	       &input.TRIG1,
-	       &input.TRIG3,
-	       &input.comp_time,
-	       &input.comp_uncer,
-	       &input.HMS_elec,
-	       &input.HMS_elecun,
-	       &input.SHMS_elec,
-	       &input.SHMS_elecun,
+	       &input.pTRIG1,
+	       &input.pTRIG3,
+	       //&input.comp_time,
+	       //&input.comp_uncer,
+	       //&input.HMS_elec,
+	       //&input.HMS_elecun,
+	       //&input.SHMS_elec,
+	       //&input.SHMS_elecun,
 	       &input.SENT_EDTM);   
 
 
@@ -161,23 +170,28 @@ void plot_Yield(Int_t numRuns = 0){
      runNumber[j] = input.run_num;
      charge[j] = input.BCM4B;
      time[j] = input.TIME;
-     cpuLT[j] = input.comp_time;
-     cpuLT_uncer[j] = input.comp_uncer;
+     //cpuLT[j] = input.comp_time;
+     //cpuLT_uncer[j] = input.comp_uncer;
+     scalEDTM[j] = input.SENT_EDTM;
 
      counts_HMS[j] = input.HMS_EVENTS;
      counts_HMS_uncer[j] = input.HMS_EVENTSun;
-     eLT_HMS[j] = input.HMS_elec;
-     eLT_HMS_uncer[j] = input.HMS_elecun;
+     //eLT_HMS[j] = input.HMS_elec;
+     //eLT_HMS_uncer[j] = input.HMS_elecun;
      etrEff_HMS[j] = input.HMS_etrack;
      etrEff_HMS_uncer[j] = input.HMS_etrackun;
+     ptrig3[j] = input.pTRIG3;
+     tdc_trig3[j] = input.TRIG3_cut;
      ps3[j] = input.PS3;
 
      counts_SHMS[j] = input.SHMS_EVENTS;
      counts_SHMS_uncer[j] = input.SHMS_EVENTSun;
-     eLT_SHMS[j] = input.SHMS_elec;
-     eLT_SHMS_uncer[j] = input.SHMS_elecun;
+     //eLT_SHMS[j] = input.SHMS_elec;
+     //eLT_SHMS_uncer[j] = input.SHMS_elecun;
      hadtrEff_SHMS[j] = input.SHMS_ptrack;
      hadtrEff_SHMS_uncer[j] = input.SHMS_ptrackun;
+     ptrig1[j] = input.pTRIG1;
+     tdc_trig1[j] = input.TRIG1_cut;
      ps1[j] = input.PS1;
  
      j++;
@@ -192,6 +206,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 	  	current[i] = charge[i]/time[i];
 		rate_HMS[i] = counts_HMS[i]/time[i];
 		rate_SHMS[i] = counts_SHMS[i]/time[i];
+		cpuLT[i] = ((tdc_trig1[i]+tdc_trig3[i])/(((ptrig1[i]-scalEDTM[i])/ps1[i])+((ptrig3[i]-scalEDTM[i])/ps3[i])));
+		cpuLT_uncer[j] = (TMath::Sqrt(tdc_trig1[i]+tdc_trig3[i]))/(tdc_trig1[i]+tdc_trig3[i]);
 		cout << runNumber[i] << " ";
 	}
 
@@ -398,14 +414,14 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    myfile.open("/home/trottar/ResearchNP/ROOTAnalysis/kaonlt_analysis/lumiscan/OUTPUT/LuminosityScans.txt", fstream::app);
 
     	myfile << tab << '\n'
-    	       << " |More cuts without beta, coinTDC > 0 , Target " << target << "| Run Numbers ";
+    	       << " |Changes to CLT and includes TDC cuts , Target " << target << "| Run Numbers ";
 
 	for(Int_t i=0;i<numRuns-1;i++)
 	  myfile << runNumber[i] << ", ";
 
 	myfile << runNumber[numRuns-1] << "| " << '\n'
 	  // << setw(12) << "-> Applied Cuts HMS: [[Beta>0.8, Beta<1.3, Ecal>0.6, Ecal<2.0, CernpeSum>0.5, |Hms delta|<8, xptar>0.08 , yptar>0.035]]" << '\n'
-	       << setw(12) << "-> Applied Cuts HMS: [[Ecal>0.6, Ecal<2.0, |Hms delta|<8, xptar>0.08 , yptar>0.035]]" << '\n'
+	       << setw(12) << "-> Applied Cuts HMS: [[Ecal>0.6, Ecal<2.0, CernpeSum>2.0]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
   	       << setw(12) << left << "Current" << sep
@@ -431,7 +447,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
   	       << setw(12) << charge[i] << sep
   	       << setw(12) << counts_HMS[i] << sep
   	       << setw(12) << counts_HMS_uncer[i] << sep
-  	       << setw(12) << rate_HMS[i] << sep
+  	       << setw(12) << rate_HMS[i]*ps3[i] << sep
   	       << setw(12) << left << ps3[i] << sep
   	       << setw(12) << yield_HMS[i] << sep
   	       << setw(12) << yieldRel_HMS[i] << sep
@@ -446,7 +462,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 
 	myfile << tab << '\n' << sep
 	  //   << setw(12) << "-> Applied Cuts SHMS: [[Beta>0.5, Beta<1.4, Ecal<0.6, HGnpeSum<1.5, AeornpeSum<1.5, Shms delta>-10, Shms delta<20, xptar>0.08 , yptar>0.035]]" << '\n'
-	       << setw(12) << "-> Applied Cuts SHMS: [[Ecal<0.6, Shms delta>-10, Shms delta<20, xptar>0.08 , yptar>0.035]]" << '\n'
+	       << setw(12) << "-> Applied Cuts SHMS: [[Ecal>0.05, HGnpeSum>1.5]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
   	       << setw(12) << left << "Current" << sep
@@ -472,7 +488,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
   	       << setw(12) << charge[i] << sep
    	       << setw(12) << counts_SHMS[i] << sep
    	       << setw(12) << counts_SHMS_uncer[i] << sep
-  	       << setw(12) << rate_SHMS[i] << sep
+  	       << setw(12) << rate_SHMS[i]*ps1[i] << sep
   	       << setw(12) << left << ps1[i] << sep
   	       << setw(12) << yield_SHMS[i] << sep
   	       << setw(12) << yieldRel_SHMS[i] << sep

@@ -21,12 +21,12 @@ runNum=$line
 numEvts=-1
 
 #Which scripts to run
-script="get_EvtNum_${spec}.C"
-scriptPlots="plot_Stat_${spec}.C"
+script="get_EvtNum.C"
+scriptPlots="plot_Stat.C"
 
 #which commands to run
-runScript="root -l -b -q \"${script}(${runNum},${numEvts})\""
-runScriptPlots="root -l -b -q \"${scriptPlots}(${runNum},${numEvts})\""
+runScript="root -l -b -q \"${script}(${runNum},${numEvts},${spec})\""
+runScriptPlots="root -l -b -q \"${scriptPlots}(${runNum},${numEvts},${spec})\""
 
 #Excecute 
 {

@@ -1,4 +1,8 @@
-void plot_Stat_hms(Int_t runNum = 0, Int_t numEvts = 0){
+#include <string>
+#include <cstdio>
+#include <iostream>
+
+void plot_Stat(Int_t runNum = 0, Int_t numEvts = 0, TString spec = ""){
 
   if(runNum==0){
   
@@ -12,8 +16,11 @@ void plot_Stat_hms(Int_t runNum = 0, Int_t numEvts = 0){
   	cin >> numEvts;
   }
 
-  TString spec = "hms";
-
+  if(spec==""){
+  
+  	cout << "Please pick a spectrometer ...\n";
+  	cin >> spec;
+  }
 
   TString rootfile = "../../ROOTfiles/KaonLT_" + spec + Form("_coin_replay_production_%i_%i",runNum,numEvts);
 
@@ -21,7 +28,7 @@ void plot_Stat_hms(Int_t runNum = 0, Int_t numEvts = 0){
   outputhist = rootfile + ".root";
   
   TString outputpdf;
-  outputpdf = "OUTPUT/" + spec + "_statsPlots_" + Form("%i",(int)runNum) + ".pdf";
+  outputpdf = "OUTPUT/" + spec + "_statsPlots_" + Form("%i",runNum) + ".pdf";
   
   TFile *f = TFile::Open(outputhist);
   if( !f || f->IsZombie()){
@@ -32,13 +39,20 @@ void plot_Stat_hms(Int_t runNum = 0, Int_t numEvts = 0){
   
   TTreeReader r("T", f);
   
-  xfpLeaf = "H.dc.x_fp";
-  yfpLeaf = "H.dc.y_fp";
-  xptarLeaf = "H.gtr.th";
-  yptarLeaf = "H.gtr.ph";
-  deltaLeaf = "H.gtr.dp";
-  wLeaf = "H.kin.W2";
-  
+  if(spec == "hms"){
+    xfpLeaf = "H.dc.x_fp";
+    yfpLeaf = "H.dc.y_fp";
+    xptarLeaf = "H.gtr.th";
+    yptarLeaf = "H.gtr.ph";
+    deltaLeaf = "H.gtr.dp";
+    wLeaf = "H.kin.W2";
+  else{
+    xfpLeaf = "P.dc.x_fp";
+    yfpLeaf = "P.dc.y_fp";
+    xptarLeaf = "P.gtr.th";
+    yptarLeaf = "P.gtr.ph";
+    deltaLeaf = "P.gtr.dp"
+      }
   TTreeReaderValue<Double_t> xfp(r, xfpLeaf);
   TTreeReaderValue<Double_t> yfp(r, yfpLeaf);
   TTreeReaderValue<Double_t> xptar(r, xptarLeaf);
@@ -55,23 +69,40 @@ void plot_Stat_hms(Int_t runNum = 0, Int_t numEvts = 0){
   TH2F *h3= new TH2F("h3","W^2 vs Xptar ", 200, -.1, .1,200,0, 20);
   TH2F *h4= new TH2F("h4","W^2 vs Yptar ", 200, -.1, .1,200,0, 20);
   
-  
-  while(r.Next()){
-  
-  	int k;
-        cout << "While loop W^2 " << k << '\n';
+  if(spec=="hms"){
+    while(r.Next()){
+      
+      int k;
+      cout << "While loop W^2 " << k << '\n';
+      
+      if(*hsdelta > -8 && *hsdelta < 8
+	 ){
 	
-		if(*hsdelta > -8 && *hsdelta < 8
-	  ){
-
 	h1->Fill(*yfp,*xfp);
 	h2->Fill(*yptar,*xptar);
 	h3->Fill(*xptar,*invmass);
 	h4->Fill(*yptar,*invmass);
-  
-	   k++;
-	   }
-  
+	
+	k++;
+      }
+      
+    }
+  }else{
+    while(r.Next()){
+      
+      int k;
+      cout << "While loop W^2 " << k << '\n';
+      
+      if(*ssdelta > -10 && *ssdelta < 15
+	 ){
+	
+	h1->Fill(*yfp,*xfp);
+	h2->Fill(*yptar,*xptar);
+	
+	k++;
+      }
+      
+    }
   }
 
   h1->GetXaxis()->SetTitle("yfp");

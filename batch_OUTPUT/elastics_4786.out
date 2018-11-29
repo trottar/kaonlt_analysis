@@ -8,25 +8,25 @@ Error in <THaFormula::Compile>:  Bad numerical expression : ":SHMSaerogelgainfat
 Job info...
  
 
-Auger JobId: 59888036 [PBS JobId: 45685032]
+Auger JobId: 60486196 [PBS JobId: 46230304]
 
-11/12/2018 00:49:45  A     Name=elastics_4786;User=trottar;queue=prod64
-11/12/2018 00:51:10  A     Stagin started
-11/12/2018 00:51:10  A     Job started
-11/12/2018 01:23:43  A     Job started
-11/12/2018 01:23:43  A     Job completed
+11/28/2018 14:59:02  A     Name=elastics_4786;User=trottar;queue=prod64
+11/28/2018 15:00:35  A     Stagin started
+11/28/2018 15:00:35  A     Job started
+11/28/2018 15:58:53  A     Job started
+11/28/2018 15:58:53  A     Job completed
 
-Job: 45685032.farmpbs14
+Job: 46230304.farmpbs14
 
-11/12/2018 00:50:51  S    enqueuing into prod64, state 2 hop 1
-11/12/2018 00:50:51  S    Holds u released at request of trottar@farmpbs14
-11/12/2018 00:50:51  A    queue=prod64
-11/12/2018 00:50:58  S    Job Run at request of root@farmpbs14
-11/12/2018 00:50:58  A    user=trottar group=enp account=hallc jobname=elastics_4786 queue=prod64 ctime=1542001851 qtime=1542001851 etime=1542001851 start=1542001858 owner=trottar@farmpbs14 exec_host=farm180233/4+farm180233/5 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=24:00:00 
-11/12/2018 01:23:45  S    Exit_status=0 resources_used.cput=00:32:23 resources_used.mem=317916kb resources_used.vmem=1039336kb resources_used.walltime=00:32:47
-11/12/2018 01:23:45  S    on_job_exit valid pjob: 45685032.farmpbs14 (substate=50)
-11/12/2018 01:23:45  S    dequeuing from prod64, state COMPLETE
-11/12/2018 01:23:45  A    user=trottar group=enp account=hallc jobname=elastics_4786 queue=prod64 ctime=1542001851 qtime=1542001851 etime=1542001851 start=1542001858 owner=trottar@farmpbs14 exec_host=farm180233/4+farm180233/5 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=24:00:00 session=27998 end=1542003825 Exit_status=0 resources_used.cput=00:32:23 resources_used.mem=317916kb resources_used.vmem=1039336kb resources_used.walltime=00:32:47
+11/28/2018 15:00:19  S    enqueuing into prod64, state 2 hop 1
+11/28/2018 15:00:19  S    Holds u released at request of trottar@farmpbs14
+11/28/2018 15:00:19  A    queue=prod64
+11/28/2018 15:00:32  S    Job Run at request of root@farmpbs14
+11/28/2018 15:00:33  A    user=trottar group=enp account=hallc jobname=elastics_4786 queue=prod64 ctime=1543435219 qtime=1543435219 etime=1543435219 start=1543435233 owner=trottar@farmpbs14 exec_host=farm140162/45+farm140162/46 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=24:00:00 
+11/28/2018 15:58:55  S    Exit_status=0 resources_used.cput=00:58:04 resources_used.mem=428036kb resources_used.vmem=1149376kb resources_used.walltime=00:58:23
+11/28/2018 15:58:55  S    on_job_exit valid pjob: 46230304.farmpbs14 (substate=50)
+11/28/2018 15:58:55  S    dequeuing from prod64, state COMPLETE
+11/28/2018 15:58:55  A    user=trottar group=enp account=hallc jobname=elastics_4786 queue=prod64 ctime=1543435219 qtime=1543435219 etime=1543435219 start=1543435233 owner=trottar@farmpbs14 exec_host=farm140162/45+farm140162/46 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=24:00:00 session=19745 end=1543438735 Exit_status=0 resources_used.cput=00:58:04 resources_used.mem=428036kb resources_used.vmem=1149376kb resources_used.walltime=00:58:23
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,4 +1,4 @@
-void get_EvtNum_hms(Int_t runNum = 0, Int_t numEvts = 0){
+void get_EvtNum(Int_t runNum = 0, Int_t numEvts = 0, TString spec = ""){
 
   if(runNum==0){
   
@@ -12,9 +12,13 @@ void get_EvtNum_hms(Int_t runNum = 0, Int_t numEvts = 0){
   	cin >> numEvts;
   }
 
-  TString spec = "hms";
+  if(spec==""){
+  
+  	cout << "Please pick a spectrometer ...\n";
+  	cin >> spec;
+  }
 
-  TString rootfile = Form("../../ROOTfiles/KaonLT_%d_coin_replay_production_%i_%i",spec,runNum,numEvts);
+  TString rootfile = "../../ROOTfiles/KaonLT_" + spec + Form("_coin_replay_production_%i_%i",runNum,numEvts);
 
   TString outputhist;
   outputhist = rootfile + ".root";
@@ -28,8 +32,12 @@ void get_EvtNum_hms(Int_t runNum = 0, Int_t numEvts = 0){
   
   TTreeReader r("T", f);
   
+  if(spec == "hms"){
   wLeaf = "H.kin.W2";
   // deltaLeaf = "H.gtr.dp";
+  }else{
+  wLeaf = "P.kin.W2";   
+  } 
   
   TTreeReaderValue<Double_t> invMass(r, wLeaf);
   //TTreeReaderValue<Double_t> hsdelta(r,deltaLeaf);
@@ -52,21 +60,38 @@ void get_EvtNum_hms(Int_t runNum = 0, Int_t numEvts = 0){
   
   TF1 *g3 = new TF1("g3","gaus(3)-gaus(0)",x0,xf);
   
-  while(r.Next()){
+  if(spec == "hms"){
+    while(r.Next()){
   
-  	int k;
-        //cout << "While loop W^2 " << k << '\n';
-	
-	//	if(*hsdelta > -8 && *hsdelta < 8
-	//   ){
-
-	   h1->Fill(*invMass);
-  
-	   k++;
-	   //}
-  
+      int k;
+      //cout << "While loop W^2 " << k << '\n';
+      
+      //	if(*hsdelta > -8 && *hsdelta < 8
+      //   ){
+      
+      h1->Fill(*invMass);
+      
+      k++;
+      //}
+      
+    }
+  }else{
+    while(r.Next()){
+      
+      int k;
+      //cout << "While loop W^2 " << k << '\n';
+      
+      //	if(*ssdelta > -8 && *ssdelta < 8
+      //   ){
+      
+      h1->Fill(*invMass);
+      
+      k++;
+      //}
+      
+    }
   }
-  
+
   h1->Draw();
   
   h1->Fit(g1,"R");
@@ -87,7 +112,7 @@ void get_EvtNum_hms(Int_t runNum = 0, Int_t numEvts = 0){
   
   cout << "The number of events were " << g3->Integral(0,2)/0.02 << '\n';
 
-  c1->Print(spec + "_" + Form("%i",(Int_t)runNum) + ".png");
+  c1->Print(spec + "_" + Form("%i",runNum) + ".png");
 
   const string sep = " |";
   const int total_width = 154;
