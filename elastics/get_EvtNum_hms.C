@@ -14,10 +14,7 @@ void get_EvtNum_hms(Int_t runNum = 0, Int_t numEvts = 0){
 
   TString spec = "hms";
 
-  TString rootfile = "../../ROOTfiles/KaonLT_coin_replay_production_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
-  //TString rootfile = "../../ROOTfiles/" + spec + "_coin_replay_elastics_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
-  // TString rootfile = "../mkjones/" + spec + "_matrixopt/ROOTfiles/" + spec + "_replay_matrixopt_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
-  // TString rootfile = "ROOTfiles/" + spec + "_coin_replay_production_" + Form("%i",(Int_t)runNum) + "_" + Form("%i",(Int_t)numEvts);
+  TString rootfile = Form("../../ROOTfiles/KaonLT_%d_coin_replay_production_%i_%i",spec,runNum,numEvts);
 
   TString outputhist;
   outputhist = rootfile + ".root";
@@ -90,7 +87,7 @@ void get_EvtNum_hms(Int_t runNum = 0, Int_t numEvts = 0){
   
   cout << "The number of events were " << g3->Integral(0,2)/0.02 << '\n';
 
-  c1->Print(spec + "_" + Form("%i",(int)runNum) + ".png");
+  c1->Print(spec + "_" + Form("%i",(Int_t)runNum) + ".png");
 
   const string sep = " |";
   const int total_width = 154;
