@@ -1,7 +1,7 @@
 PROJECT: e01011
-TRACK: debug
+TRACK: analysis
 JOBNAME: elastics_4787
-MEMORY: 1500 MB
+MEMORY: 2500 MB
 OS: centos7
 CPU: 2
 COMMAND:/home/trottar/Analysis/hallc_replay/run_Replay.sh 4787 elastics

@@ -259,7 +259,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    TGraphErrors *gr1a = new TGraphErrors(numRuns,rate_HMS,yieldRel_HMS,0,uncerEvts_HMS);
    //gr1->SetLineColor(2);
    //gr1->SetLineWidth(2);
-   //gr1->GetYaxis()->SetRangeUser(0,2);
+   gr1->GetYaxis()->SetRangeUser(0.9,1.8);
+   gr1a->GetYaxis()->SetRangeUser(0.9,1.8);
    //gr1->GetXaxis()->SetRangeUser(0,current[0]);
 
    	if(targetType == 1){
@@ -334,7 +335,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    TGraphErrors *gr2a = new TGraphErrors(numRuns,rate_SHMS,yieldRel_SHMS,0,uncerEvts_SHMS);
    //gr2->SetLineColor(2);
    //gr2->SetLineWidth(2);
-   //gr2->GetYaxis()->SetRangeUser(0,2);
+   gr2->GetYaxis()->SetRangeUser(0.9,1.8);
+   gr2a->GetYaxis()->SetRangeUser(0.9,1.8);
    //gr2->GetXaxis()->SetRangeUser(0,current[0]);
 
    	if(targetType == 1){

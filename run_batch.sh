@@ -30,11 +30,11 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
     cp /dev/null ${batch}    
     ##Creation of batch script for submission##
     echo "PROJECT: e01011" >> ${batch}
-    #echo "TRACK: analysis" >> ${batch}
-    echo "TRACK: debug" >> ${batch}
+    echo "TRACK: analysis" >> ${batch}
+    #echo "TRACK: debug" >> ${batch}
     echo "JOBNAME: ${rtype}_${runNum}" >> ${batch}
-    echo "MEMORY: 1500 MB" >> ${batch}
-    #echo "MEMORY: 2500 MB" >> ${batch}
+    #echo "MEMORY: 2000 MB" >> ${batch}
+    echo "MEMORY: 2500 MB" >> ${batch}
     echo "OS: centos7" >> ${batch}
     echo "CPU: 2" >> ${batch}
     #echo "TIME: 1" >> ${batch}
