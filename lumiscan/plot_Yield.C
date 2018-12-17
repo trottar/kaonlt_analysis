@@ -78,7 +78,7 @@ void plot_Yield(Int_t numRuns = 0){
   Double_t charge[numRuns];
   Double_t time[numRuns];
   Double_t current[numRuns];
-  Double_t cpuLT[numRuns];
+  //Double_t cpuLT[numRuns];
   Double_t cpuLT_uncer[numRuns]; 
   Double_t scalEDTM[numRuns];
 
@@ -86,21 +86,33 @@ void plot_Yield(Int_t numRuns = 0){
   Double_t counts_HMS_uncer[numRuns];
   Double_t eLT_HMS[numRuns];
   Double_t eLT_HMS_uncer[numRuns];
+  Double_t trEff_HMS[numRuns];
+  Double_t trEff_HMS_uncer[numRuns];
   Double_t etrEff_HMS[numRuns];
   Double_t etrEff_HMS_uncer[numRuns];
   Double_t ptrig3[numRuns];
   Double_t tdc_trig3[numRuns];
   Double_t ps3[numRuns];
+  Double_t cpuLT_HMS[numRuns];
 
   Double_t counts_SHMS[numRuns];
   Double_t counts_SHMS_uncer[numRuns];
   Double_t eLT_SHMS[numRuns];
   Double_t eLT_SHMS_uncer[numRuns];
+  Double_t trEff_SHMS[numRuns];
+  Double_t trEff_SHMS_uncer[numRuns];
   Double_t hadtrEff_SHMS[numRuns];
   Double_t hadtrEff_SHMS_uncer[numRuns];
+  Double_t pitrEff_SHMS[numRuns];
+  Double_t pitrEff_SHMS_uncer[numRuns];
+  Double_t KtrEff_SHMS[numRuns];
+  Double_t KtrEff_SHMS_uncer[numRuns];
+  Double_t ptrEff_SHMS[numRuns];
+  Double_t ptrEff_SHMS_uncer[numRuns];
   Double_t ptrig1[numRuns];
   Double_t tdc_trig1[numRuns];
   Double_t ps1[numRuns];
+  Double_t cpuLT_SHMS[numRuns];
 
 
   Int_t goodRuns[numRuns];
@@ -170,14 +182,14 @@ void plot_Yield(Int_t numRuns = 0){
      runNumber[j] = input.run_num;
      charge[j] = input.BCM4B;
      time[j] = input.TIME;
-     //cpuLT[j] = input.comp_time;
-     //cpuLT_uncer[j] = input.comp_uncer;
      scalEDTM[j] = input.SENT_EDTM;
 
      counts_HMS[j] = input.HMS_EVENTS;
      counts_HMS_uncer[j] = input.HMS_EVENTSun;
      //eLT_HMS[j] = input.HMS_elec;
      //eLT_HMS_uncer[j] = input.HMS_elecun;
+     trEff_HMS[j] = input.HMS_track;
+     trEff_HMS_uncer[j] = input.HMS_trackun;
      etrEff_HMS[j] = input.HMS_etrack;
      etrEff_HMS_uncer[j] = input.HMS_etrackun;
      ptrig3[j] = input.pTRIG3;
@@ -188,8 +200,16 @@ void plot_Yield(Int_t numRuns = 0){
      counts_SHMS_uncer[j] = input.SHMS_EVENTSun;
      //eLT_SHMS[j] = input.SHMS_elec;
      //eLT_SHMS_uncer[j] = input.SHMS_elecun;
-     hadtrEff_SHMS[j] = input.SHMS_ptrack;
-     hadtrEff_SHMS_uncer[j] = input.SHMS_ptrackun;
+     trEff_SHMS[j] = input.SHMS_track;
+     trEff_SHMS_uncer[j] = input.SHMS_trackun;
+     hadtrEff_SHMS[j] = input.SHMS_hadtrack;
+     hadtrEff_SHMS_uncer[j] = input.SHMS_hadtrackun;
+     pitrEff_SHMS[j] = input.SHMS_pitrack;
+     pitrEff_SHMS_uncer[j] = input.SHMS_pitrackun;
+     KtrEff_SHMS[j] = input.SHMS_Ktrack;
+     KtrEff_SHMS_uncer[j] = input.SHMS_Ktrackun;
+     ptrEff_SHMS[j] = input.SHMS_ptrack;
+     ptrEff_SHMS_uncer[j] = input.SHMS_ptrackun;
      ptrig1[j] = input.pTRIG1;
      tdc_trig1[j] = input.TRIG1_cut;
      ps1[j] = input.PS1;
@@ -206,8 +226,10 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 	  	current[i] = charge[i]/time[i];
 		rate_HMS[i] = counts_HMS[i]/time[i];
 		rate_SHMS[i] = counts_SHMS[i]/time[i];
-		cpuLT[i] = ((tdc_trig1[i]+tdc_trig3[i])/(((ptrig1[i]-scalEDTM[i])/ps1[i])+((ptrig3[i]-scalEDTM[i])/ps3[i])));
-		cpuLT_uncer[j] = (TMath::Sqrt(tdc_trig1[i]+tdc_trig3[i]))/(tdc_trig1[i]+tdc_trig3[i]);
+		//cpuLT[i] = ((tdc_trig1[i]+tdc_trig3[i])/(((ptrig1[i]-scalEDTM[i])/ps1[i])+((ptrig3[i]-scalEDTM[i])/ps3[i])));
+		cpuLT_uncer[i] = (TMath::Sqrt(tdc_trig1[i]+tdc_trig3[i]))/(tdc_trig1[i]+tdc_trig3[i]);
+		cpuLT_HMS[i] = ((tdc_trig3[i])/((ptrig3[i]-scalEDTM[i])/ps3[i]));
+		cpuLT_SHMS[i] = ((tdc_trig1[i])/((ptrig1[i]-scalEDTM[i])/ps1[i]));
 		cout << runNumber[i] << " ";
 	}
 
@@ -217,8 +239,11 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 //Calculates yield for good cherenkov with and without track cuts
  
    	for(Int_t i=0;i<numRuns;i++){
-	  yield_HMS[i] = (counts_HMS[i]*ps3[i])/(charge[i]*cpuLT[i]*etrEff_HMS[i]);
-	  yield_SHMS[i] = (counts_SHMS[i]*ps1[i])/(charge[i]*cpuLT[i]*hadtrEff_SHMS[i]);
+	  //yield_HMS[i] = (counts_HMS[i]*ps3[i])/(charge[i]*cpuLT[i]*etrEff_HMS[i]);
+	  //yield_SHMS[i] = (counts_SHMS[i]*ps1[i])/(charge[i]*cpuLT[i]*hadtrEff_SHMS[i]);
+	  yield_HMS[i] = (counts_HMS[i]*ps3[i])/(charge[i]*cpuLT_HMS[i]*etrEff_HMS[i]);
+	  //yield_SHMS[i] = (counts_SHMS[i]*ps1[i])/(charge[i]*cpuLT_SHMS[i]*hadtrEff_SHMS[i]);
+	  yield_SHMS[i] = (counts_SHMS[i]*ps1[i])/(charge[i]*cpuLT_SHMS[i]*pitrEff_SHMS[i]);
 
 
 	}
@@ -244,7 +269,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 //Graphs relative yield vs current
    
    //Error on TCanvas
-   TCanvas *c1 = new TCanvas("c1","Carbon, YvC");
+   TCanvas *c1 = new TCanvas("c1","Carbon, YvC", 600, 400);
    //gStyle->SetOptStat(0);
    c1->Divide(2,1,0.001,0.01);
    c1->SetFillColor(42);
@@ -259,9 +284,10 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    TGraphErrors *gr1a = new TGraphErrors(numRuns,rate_HMS,yieldRel_HMS,0,uncerEvts_HMS);
    //gr1->SetLineColor(2);
    //gr1->SetLineWidth(2);
-   gr1->GetYaxis()->SetRangeUser(0.9,1.8);
-   gr1a->GetYaxis()->SetRangeUser(0.9,1.8);
    //gr1->GetXaxis()->SetRangeUser(0,current[0]);
+   gr1->GetYaxis()->SetRangeUser(0.98,1.02);
+   gr1a->GetYaxis()->SetRangeUser(0.98,1.02);
+   gPad->Update();
 
    	if(targetType == 1){
    		gr1->SetTitle("HMS Carbon;Current [uA];Rel. Yield");
@@ -305,6 +331,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    p1->cd();
 
    gr1->Draw("AP");
+   gPad->Modified();
    gPad->Update();
    
    p1a->Range(xmin1-0.1*dx, ymin1-0.1*dy, xmax1+0.1*dx, ymax1+0.1*dy);
@@ -322,7 +349,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    //a1->Draw();
    gPad->Update();
 
-   TLine *l = new TLine(xmin1,1.,xmax1,1.);
+   TLine *l = new TLine(xmin1,1.,xmax1,.9984);
    l->SetLineColor(kRed);
    //l->SetLineWidth(2);
    l->Draw("lsame");
@@ -335,9 +362,10 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    TGraphErrors *gr2a = new TGraphErrors(numRuns,rate_SHMS,yieldRel_SHMS,0,uncerEvts_SHMS);
    //gr2->SetLineColor(2);
    //gr2->SetLineWidth(2);
-   gr2->GetYaxis()->SetRangeUser(0.9,1.8);
-   gr2a->GetYaxis()->SetRangeUser(0.9,1.8);
    //gr2->GetXaxis()->SetRangeUser(0,current[0]);
+   gr2->GetYaxis()->SetRangeUser(0.94,1.06);
+   gr2a->GetYaxis()->SetRangeUser(0.94,1.06);
+   //gPad->Update();
 
    	if(targetType == 1){
    		gr2->SetTitle("SHMS Carbon;Current [uA];Rel. Yield");
@@ -395,7 +423,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    //a2->Draw();
    gPad->Update();
 
-   TLine *l2 = new TLine(xmin2,1.,xmax2,1.);
+   TLine *l2 = new TLine(xmin2,.98547,xmax2,.98547);
    l2->SetLineColor(kRed);
    //l->SetLineWidth(2);
    l2->Draw("lsame");
@@ -416,13 +444,13 @@ cout << "\n`````````````````````````````````````````````````````````````````````
    myfile.open("/home/trottar/ResearchNP/ROOTAnalysis/kaonlt_analysis/lumiscan/OUTPUT/LuminosityScans.txt", fstream::app);
 
     	myfile << tab << '\n'
-    	       << " |Changes to CLT and includes TDC cuts , Target " << target << "| Run Numbers ";
+    	       << " |Clean pion cuts, Target " << target << "| Run Numbers ";
 
 	for(Int_t i=0;i<numRuns-1;i++)
 	  myfile << runNumber[i] << ", ";
 
 	myfile << runNumber[numRuns-1] << "| " << '\n'
-	  // << setw(12) << "-> Applied Cuts HMS: [[Beta>0.8, Beta<1.3, Ecal>0.6, Ecal<2.0, CernpeSum>0.5, |Hms delta|<8, xptar>0.08 , yptar>0.035]]" << '\n'
+	  // << setw(12) << "-> Applied Cuts HMS: [[Beta>0.8, Beta<1.3, Ecal>0.6, Ecal<2.0, CernpeSum>2.0, |Hms delta|<8, xptar>0.08 , yptar>0.035]]" << '\n'
 	       << setw(12) << "-> Applied Cuts HMS: [[Ecal>0.6, Ecal<2.0, CernpeSum>2.0]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
@@ -457,13 +485,14 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 	  //<< setw(12) << eLT_HMS[i] << sep
   	       << setw(12) << etrEff_HMS[i] << sep
   	       << setw(12) << etrEff_HMS_uncer[i] << sep
-  	       << setw(12) << cpuLT[i] << sep
+	  //<< setw(12) << cpuLT[i] << sep
+	       << setw(12) << cpuLT_HMS[i] << sep
   	       << setw(12) << cpuLT_uncer[i] << sep << '\n';
    }
 
 
 	myfile << tab << '\n' << sep
-	  //   << setw(12) << "-> Applied Cuts SHMS: [[Beta>0.5, Beta<1.4, Ecal<0.6, HGnpeSum<1.5, AeornpeSum<1.5, Shms delta>-10, Shms delta<20, xptar>0.08 , yptar>0.035]]" << '\n'
+	  //   << setw(12) << "-> Applied Cuts SHMS: [[Beta>0.5, Beta<1.4, Ecal<0.6, HGnpeSum>1.5, AeornpeSum<1.5, Shms delta>-10, Shms delta<20, xptar>0.08 , yptar>0.035]]" << '\n'
 	       << setw(12) << "-> Applied Cuts SHMS: [[Ecal>0.05, HGnpeSum>1.5]]" << '\n'
     	       << tab << '\n' << sep
     	       << setw(12) << left << "RunNumber" << sep
@@ -498,7 +527,8 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 	  //<< setw(12) << eLT_SHMS[i] << sep
   	       << setw(12) << hadtrEff_SHMS[i] << sep
   	       << setw(12) << hadtrEff_SHMS_uncer[i] << sep
-  	       << setw(12) << cpuLT[i] << sep
+	  //<< setw(12) << cpuLT[i] << sep
+	       << setw(12) << cpuLT_SHMS[i] << sep
   	       << setw(12) << cpuLT_uncer[i] << sep <<  '\n';
    }
 
@@ -508,7 +538,7 @@ cout << "\n`````````````````````````````````````````````````````````````````````
 
 
 //Prints an image file of the plot
-   c1->Print("OUTPUT/" + foutname + target + Form("_%i",runNumber[0]) + Form("-%i",runNumber[numRuns-1]) + ".png");
+   c1->Print("OUTPUT/" + foutname + target + Form("_%i",runNumber[0]) + Form("-%i",runNumber[numRuns-1]) + "_test.png");
 
    return;
 

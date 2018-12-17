@@ -1,8 +1,8 @@
 PROJECT: e01011
 TRACK: analysis
-JOBNAME: lumiscan_5303
-MEMORY: 4000 MB
+JOBNAME: lumiscan_5181
+MEMORY: 2500 MB
 OS: centos7
 CPU: 2
-COMMAND:/home/trottar/Analysis/hallc_replay/run_Replay.sh 5303 lumiscan
+COMMAND:/home/trottar/Analysis/hallc_replay/run_Replay.sh 5181 lumiscan
 MAIL: trotta@cua.edu

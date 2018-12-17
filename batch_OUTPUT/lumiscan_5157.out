@@ -3,29 +3,70 @@
 Errors...
  
 Error in <THaFormula::Compile>:  Bad numerical expression : ":SHMSaerogelgainfatorsfromLH2production4965"
+THaCodaFile: ERROR while trying to open ./cache/coin_all_05157.dat: No such file or directory
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+#0  0x00007faf387e303c in waitpid () from /lib64/libc.so.6
+#1  0x00007faf38768092 in do_system () from /lib64/libc.so.6
+#2  0x00007faf3c597ae1 in Exec (shellcmd=<optimized out>, this=0x7664f0) at /group/halla/analysis/rootbuild/ifarm1402/root-6.08.00/core/unix/src/TUnixSystem.cxx:2116
+#3  TUnixSystem::StackTrace (this=0x7664f0) at /group/halla/analysis/rootbuild/ifarm1402/root-6.08.00/core/unix/src/TUnixSystem.cxx:2403
+#4  0x00007faf3c59a1fc in TUnixSystem::DispatchSignals (this=0x7664f0, sig=kSigSegmentationViolation) at /group/halla/analysis/rootbuild/ifarm1402/root-6.08.00/core/unix/src/TUnixSystem.cxx:3661
+#5  <signal handler called>
+#6  0x00007faf3d914098 in THcAnalyzer::LoadInfo() () from /home/trottar/Analysis/hcana/libHallC.so
+#7  0x00007faf3d914697 in THcAnalyzer::PrintReport(char const*, char const*) () from /home/trottar/Analysis/hcana/libHallC.so
+#8  0x00007faf3ddde7bb in ?? ()
+#9  0x00007faf3dde0d6f in ?? ()
+#10 0x00007ffd6ab77cd0 in ?? ()
+#11 0x0000000000000000 in ?? ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+You may get help by asking at the ROOT forum http://root.cern.ch/forum.
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#6  0x00007faf3d914098 in THcAnalyzer::LoadInfo() () from /home/trottar/Analysis/hcana/libHallC.so
+#7  0x00007faf3d914697 in THcAnalyzer::PrintReport(char const*, char const*) () from /home/trottar/Analysis/hcana/libHallC.so
+#8  0x00007faf3ddde7bb in ?? ()
+#9  0x00007faf3dde0d6f in ?? ()
+#10 0x00007ffd6ab77cd0 in ?? ()
+#11 0x0000000000000000 in ?? ()
+===========================================================
+
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Job info...
  
 
-Auger JobId: 59876864 [PBS JobId: 45673982]
+Auger JobId: 61187599 [PBS JobId: 46877756]
 
-11/11/2018 17:09:01  A     Name=lumiscan_5157;User=trottar;queue=prod64
-11/11/2018 17:10:48  A     Stagin started
-11/11/2018 17:10:48  A     Job started
-11/11/2018 17:57:39  A     Job started
-11/11/2018 17:57:39  A     Job completed
+12/11/2018 16:06:36  A     Name=lumiscan_5157;User=trottar;queue=prod64
+12/11/2018 16:26:44  A     Stagin started
+12/11/2018 16:26:44  A     Job started
+12/11/2018 16:50:47  A     Job started
+12/11/2018 16:50:47  A     Job completed
 
-Job: 45673982.farmpbs14
+Job: 46877756.farmpbs14
 
-11/11/2018 17:10:42  S    enqueuing into prod64, state 2 hop 1
-11/11/2018 17:10:42  S    Holds u released at request of trottar@farmpbs14
-11/11/2018 17:10:42  A    queue=prod64
-11/11/2018 17:10:47  S    Job Run at request of root@farmpbs14
-11/11/2018 17:10:47  A    user=trottar group=enp account=hallc jobname=lumiscan_5157 queue=prod64 ctime=1541974242 qtime=1541974242 etime=1541974242 start=1541974247 owner=trottar@farmpbs14 exec_host=farm180221/76+farm180221/77 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=2000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=4000mb Resource_List.walltime=24:00:00 
-11/11/2018 17:57:43  S    Exit_status=0 resources_used.cput=00:46:47 resources_used.mem=999584kb resources_used.vmem=1794288kb resources_used.walltime=00:46:55
-11/11/2018 17:57:43  S    on_job_exit valid pjob: 45673982.farmpbs14 (substate=50)
-11/11/2018 17:57:43  A    user=trottar group=enp account=hallc jobname=lumiscan_5157 queue=prod64 ctime=1541974242 qtime=1541974242 etime=1541974242 start=1541974247 owner=trottar@farmpbs14 exec_host=farm180221/76+farm180221/77 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=2000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=4000mb Resource_List.walltime=24:00:00 session=213441 end=1541977063 Exit_status=0 resources_used.cput=00:46:47 resources_used.mem=999584kb resources_used.vmem=1794288kb resources_used.walltime=00:46:55
-11/11/2018 17:57:45  S    dequeuing from prod64, state COMPLETE
+12/11/2018 16:09:47  S    enqueuing into prod64, state 2 hop 1
+12/11/2018 16:09:47  S    Holds u released at request of trottar@farmpbs14
+12/11/2018 16:09:47  A    queue=prod64
+12/11/2018 16:25:10  S    Job Run at request of root@farmpbs14
+12/11/2018 16:25:10  A    user=trottar group=enp account=hallc jobname=lumiscan_5157 queue=prod64 ctime=1544562587 qtime=1544562587 etime=1544562587 start=1544563510 owner=trottar@farmpbs14 exec_host=farm140201/16+farm140201/17 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=24:00:00 
+12/11/2018 16:51:00  S    Exit_status=0 resources_used.cput=00:00:21 resources_used.mem=445400kb resources_used.vmem=1839096kb resources_used.walltime=00:25:50
+12/11/2018 16:51:00  S    on_job_exit valid pjob: 46877756.farmpbs14 (substate=50)
+12/11/2018 16:51:00  S    dequeuing from prod64, state COMPLETE
+12/11/2018 16:51:00  A    user=trottar group=enp account=hallc jobname=lumiscan_5157 queue=prod64 ctime=1544562587 qtime=1544562587 etime=1544562587 start=1544563510 owner=trottar@farmpbs14 exec_host=farm140201/16+farm140201/17 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=24:00:00 session=28173 end=1544565060 Exit_status=0 resources_used.cput=00:00:21 resources_used.mem=445400kb resources_used.vmem=1839096kb resources_used.walltime=00:25:50
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

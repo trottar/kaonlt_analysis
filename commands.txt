@@ -55,6 +55,10 @@ Emacs Commands
 * Select next split window, C-x o
 * Open terminal in emacs, M-x ansi-term (then hit ENTER)
   -to use limited C-x commands, use C-c <singlecharacter> (e.g. C-c o == C-x o)
+* Use mouse in -nw, M-x xterm
+* Update buffer if changes occur, C-x C-v (then hit ENTER)
+* Auto update buffer if changes occur, M-x (then type global-auto-revert-mode)
+
 
 ===================================================================================================
 
@@ -78,9 +82,11 @@ GitHub Commands
   >git pull origin <branch>
   >git push origin <branch> 
 * create branch from local repo, git branch <newbranch>
-* delete branch from local repo, git branch -d <branch>
+* delete local branch from local repo, git branch -d <branch> (-D forces)
 * see all branches, git branch -a
 * change branch, git checkout <differentBranch>
+* go to remote branch version of local repo, git checkout --track origin/<branch>
+* delete remote branch, git push branch origin --delete <branch>
 * specify a new remote repo (ie upstream), git remote add upstream <remoteRepo>
 * set up upstream where push will default, git push --set-upstream origin <branch>
 * block push to a remote repo, git remote set-url --push <remoterepo> <messagereminder>
@@ -109,3 +115,36 @@ GitHub Commands
   >git commit 
   >git push
   >git submodule status (double check the submodule is properly in your repo now)
+
+===================================================================================================
+
+Linux Commands
+
+* suspend current activity, C-z
+* see all running jobs in terminal, jobs
+* resume suspended activity in foreground, fg %# (where # is job number)
+* resume suspended activity in background, bg %# (where # is job number)
+* kill a job, kill %# (where # is job number)
+* find file in directory, find -name "<filename>"
+* make python or shell script work, chmod u+x <script>
+* run python script, python <script>.py
+* see size of file, ls -ltrh
+* see path of directories, ls -la
+* see amount of data processes, top -u <username>
+* see last commands, history
+* give anyone permission to edit home directory, chmod o+rw /home/<username> (works for individual directories and files)
+* take away permission to edit home directory, chmod o-rw /home/<username> (works for individual directories and files)
+* to give permission to members of group to read home directory, drwxr-x---
+* by default jlab has most secure permissions on home directory, drwx------
+* procedures (ie source root version) automatically on login, emacs ~/.login
+
+===================================================================================================
+
+Batch Job Commands
+
+* run batchscript, jsub <batchscript>
+* find where files about batch are found (e.g. *.err), ls ~/.farm_out/
+* see job info, jobinfo <jobindex#>
+* cancel job, jkill <jobindex#>
+* cancel all jobs, jkill 0
+* see progress of jobs, jobstat -u <username>
