@@ -12,7 +12,7 @@ from array import array
 target = sys.argv[1]
 #target = "Carbon"
 numRuns = 5
-comment="Different CPU LT for HMS and SHMS"
+comment="Clean pion cuts"
 
 def getValues() :
 
@@ -133,7 +133,7 @@ def calcYield() :
     [current,rate_HMS,rate_SHMS,cpuLT_HMS,cpuLT_uncer,cpuLT_SHMS,uncerEvts_HMS,uncerEvts_SHMS] = findVar()
 
     yield_HMS = array('f',[(x*y)/(t*u*v) for x,y,t,u,v in zip(HMS_EVENTS,PS3,BCM4B,cpuLT_HMS,HMS_etrack)])
-    yield_SHMS = array('f',[(x*y)/(t*u*v) for x,y,t,u,v in zip(SHMS_EVENTS,PS1,BCM4B,cpuLT_SHMS,SHMS_hadtrack)])
+    yield_SHMS = array('f',[(x*y)/(t*u*v) for x,y,t,u,v in zip(SHMS_EVENTS,PS1,BCM4B,cpuLT_SHMS,SHMS_pitrack)])
     yieldRel_HMS = array('f',[x/yield_HMS[0] for x in yield_HMS])
     yieldRel_SHMS = array('f',[x/yield_SHMS[0] for x in yield_SHMS])
 
@@ -251,13 +251,13 @@ def main() :
     plt.scatter(current,yieldRel_HMS,color='blue',zorder=4)
     plt.ylabel('Rel. Yield', fontsize=16)
     if target == 'LD2' :
-        plt.title('HMS LD2', fontsize =20)
+        plt.title('HMS LD2 %s-%s' % (run_num[0],run_num[numRuns-1]), fontsize =16)
         plt.xlabel('Current [uA]', fontsize =16)
     elif target == 'LH2' :
-        plt.title('HMS LH2', fontsize =20)
+        plt.title('HMS LH2 %s-%s' % (run_num[0],run_num[numRuns-1]), fontsize =16)
         plt.xlabel('Current [uA]', fontsize =16)
     else :
-        plt.title('HMS Carbon', fontsize =20)
+        plt.title('HMS Carbon %s-%s' % (run_num[0],run_num[numRuns-1]), fontsize =16)
         plt.xlabel('Current [uA]', fontsize =16)
     
     #SHMS plot
@@ -270,13 +270,13 @@ def main() :
     plt.scatter(current,yieldRel_SHMS,color='blue',zorder=4)
     plt.ylabel('Rel. Yield', fontsize=16)
     if target == 'LD2' :
-        plt.title('SHMS LD2', fontsize =20)
+        plt.title('SHMS LD2 %s-%s' % (run_num[0],run_num[numRuns-1]), fontsize =16)
         plt.xlabel('Current [uA]', fontsize =16)
     elif target == 'LH2' :
-        plt.title('SHMS LH2', fontsize =20)
+        plt.title('SHMS LH2 %s-%s' % (run_num[0],run_num[numRuns-1]), fontsize =16)
         plt.xlabel('Current [uA]', fontsize =16)
     else :
-        plt.title('SHMS Carbon', fontsize =20)
+        plt.title('SHMS Carbon %s-%s' % (run_num[0],run_num[numRuns-1]), fontsize =16)
         plt.xlabel('Current [uA]', fontsize =16)
 
 
@@ -299,7 +299,7 @@ def main() :
     tot_shms = []
 
     for i in range(numRuns) :
-        shms_data.append(shms_tuple(run_num[i],round(current[i],2),round(TIME[i],2),round(BCM4B[i],2),round(SHMS_EVENTS[i],2),round(SHMS_EVENTSun[i],2),round(rate_SHMS[i],2),round(PS3[i],2),round(yield_SHMS[i],2),round(yieldRel_SHMS[i],2),round(uncerEvts_SHMS[i],2),round(SHMS_hadtrack[i],2),round(SHMS_hadtrackun[i],2),round(cpuLT_SHMS[i],2),round(cpuLT_uncer[i],2)))
+        shms_data.append(shms_tuple(run_num[i],round(current[i],2),round(TIME[i],2),round(BCM4B[i],2),round(SHMS_EVENTS[i],2),round(SHMS_EVENTSun[i],2),round(rate_SHMS[i],2),round(PS3[i],2),round(yield_SHMS[i],2),round(yieldRel_SHMS[i],2),round(uncerEvts_SHMS[i],2),round(SHMS_pitrack[i],2),round(SHMS_pitrackun[i],2),round(cpuLT_SHMS[i],2),round(cpuLT_uncer[i],2)))
         tot_shms.append(shms_data[i])
 
     lumiTable([tot_hms[0],tot_hms[1],tot_hms[2],tot_hms[3],tot_hms[4]],[tot_shms[0],tot_shms[1],tot_shms[2],tot_shms[3],tot_shms[4]])
