@@ -1,5 +1,5 @@
 PROJECT: e01011
-TRACK: analysis
+TRACK: debug
 JOBNAME: elastics_4787
 MEMORY: 2500 MB
 OS: centos7
