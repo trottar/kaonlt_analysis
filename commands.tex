@@ -1,0 +1,306 @@
+% Created 2018-12-20 Thu 05:57
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Richard L. Trotta III}
+\date{\today}
+\title{Commands for Various Programs}
+\hypersetup{
+ pdfauthor={Richard L. Trotta III},
+ pdftitle={Commands for Various Programs},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.3.1 (Org mode 9.1.14)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Emacs Commands}
+\label{sec:org748170b}
+\subsection{undo, C-x u}
+\label{sec:org92fa04e}
+\subsection{redo, C-g C-\_}
+\label{sec:org763760a}
+\subsection{save, C-x C-s}
+\label{sec:org7b34e16}
+\subsection{Save buffer as different file, C-x C-w}
+\label{sec:orge32e277}
+\subsection{Save all open buffers, C-x s}
+\label{sec:orgb182397}
+\subsection{Insert another file's content into current one, C-x i}
+\label{sec:orgac2dd5f}
+\subsection{exit (no save), C-x C-c}
+\label{sec:org1f57953}
+\subsection{next line, C-n}
+\label{sec:org6f8885e}
+\subsection{previous line, C-p}
+\label{sec:org62dbdbd}
+\subsection{Move one character forward, C-f}
+\label{sec:org7eae59e}
+\subsection{Move one word forward, M-f}
+\label{sec:orge165386}
+\subsection{Move one word backward, M-b}
+\label{sec:org209c57d}
+\subsection{Move to start of a line, C-a}
+\label{sec:orgf040a6f}
+\subsection{Move to end of a line, C-e}
+\label{sec:org9d4be90}
+\subsection{Move to start of a sentence, M-a}
+\label{sec:org7b16fd3}
+\subsection{Move to end of a sentence, M-e}
+\label{sec:orgc9a7f13}
+\subsection{Move one page down, C-v (pgDn)}
+\label{sec:org559431f}
+\subsection{Move one page up, M-v (pgUp)}
+\label{sec:orgd1ba80c}
+\subsection{Move to beginning of file, M-<}
+\label{sec:orgf44f197}
+\subsection{Move to end of file, M->}
+\label{sec:org7bc1909}
+\subsection{Mark (highlight) text, C-space (C-@)}
+\label{sec:org8c1153f}
+\subsection{Select all, C-x h}
+\label{sec:orgf0d1a75}
+\subsection{Select paragraph, M-h}
+\label{sec:orge715041}
+\subsection{copy, M-w}
+\label{sec:org1f77834}
+\subsection{paste, C-y}
+\label{sec:org332f976}
+\subsection{cut, C-w}
+\label{sec:org1eac603}
+\subsection{delete word, M-d}
+\label{sec:org92b3b83}
+\subsection{delete line, C-k}
+\label{sec:orgae9a4ec}
+\subsection{delete sentence, M-k}
+\label{sec:orgd891b47}
+\subsection{search (forward), C-s (C-s to see next instance)}
+\label{sec:orgb735ac7}
+\subsection{search (backward), C-r (C-r to see next instance)}
+\label{sec:org4eff8c2}
+\subsection{replace word, M-\% (press '!' to replace all)}
+\label{sec:org7d11a20}
+\subsection{spell check, M-x (type ispell in mini-buffer)}
+\label{sec:orga92987f}
+\subsubsection{a, correct}
+\label{sec:org2580e6a}
+\subsubsection{r, replace}
+\label{sec:orga56e497}
+\subsection{center line, M-o M-s}
+\label{sec:org1b8d7ab}
+\subsection{change mode (ie c++, java, etc.), M-x (then type; c-mode, java-mode, etc.)}
+\label{sec:org9e48bd8}
+\subsection{bold, M-o b}
+\label{sec:orgb60ab53}
+\subsection{italic, M-o i}
+\label{sec:org30e2a9f}
+\subsection{underline, M-o u}
+\label{sec:orgd5b65d0}
+\subsection{default, M-o d}
+\label{sec:org67ab539}
+\subsection{tab, C-q TAB}
+\label{sec:org1a46deb}
+\subsection{keep indentation, C-j}
+\label{sec:org4806700}
+\subsection{Find difference between two files, M-x diff (then enter names of files)}
+\label{sec:org9b01bde}
+\subsection{Switch buffer, C-x b (TAB then type buffer name from list of avaliable)}
+\label{sec:org5ed8103}
+\subsection{Kill buffer, C-x k  (TAB then type buffer name from list of avaliable)}
+\label{sec:orga06ccf8}
+\subsection{See all open buffers, C-x C-b}
+\label{sec:orgd6486cd}
+\subsection{Open different file in current buffer, C-x C-f}
+\label{sec:org16097bc}
+\subsection{Open buffer in new frame, C-x 5 (type in file name)}
+\label{sec:org6bc982c}
+\subsection{Open split window horizontal, C-x 2}
+\label{sec:org6f3cb8d}
+\subsection{Open split window vertical, C-x 3}
+\label{sec:orgf78279b}
+\subsection{Close all split windows, C-x 1}
+\label{sec:org581fe88}
+\subsection{Select next split window, C-x o}
+\label{sec:orgb94a60c}
+\subsection{Open terminal in emacs, M-x ansi-term (then hit ENTER)}
+\label{sec:orgeb7df18}
+\subsubsection{to use limited C-x commands, use C-c <singlecharacter> (e.g. C-c o == C-x o)}
+\label{sec:org2a665de}
+\subsection{Use mouse in -nw, M-x xterm}
+\label{sec:org1da042c}
+\subsection{Update buffer if changes occur, C-x C-v (then hit ENTER)}
+\label{sec:org9227c2f}
+\subsection{Auto update buffer if changes occur, M-x (then type global-auto-revert-mode)}
+\label{sec:orgeda078b}
+\section{GitHub Commands}
+\label{sec:orgb4e52b1}
+\subsection{clone a remote repo (https) to your local repo, git clone <remoteRepoWebAddress>}
+\label{sec:orgcebefbf}
+\subsection{clone a remote repo (https) to your local repo with desired directory name, git clone <remoteRepoWebAddress> <directoryName>}
+\label{sec:orgf08eaa7}
+\subsection{see changes to local repo, git status}
+\label{sec:org3b69743}
+\subsection{bring up window to see all commits, gitk}
+\label{sec:org130c70e}
+\subsection{see differences from previous version of file, git diff <file>}
+\label{sec:org798a83f}
+\subsection{prepare change for commit, git add <file>}
+\label{sec:orgccacf5e}
+\subsection{reset modified file to unmerged path (ie no longer ready for commt), git reset HEAD <file> (do a git add after this then, may have to do a few times)}
+\label{sec:org159ca81}
+\subsection{discard change from commit, git checkout <file>}
+\label{sec:org79242d0}
+\subsection{commit all added items to local repo, git commit --author "Richard-Trotta <trotta@cua.edu>" -m "<some message>"}
+\label{sec:org1f20b04}
+\subsection{check where remote repo is and name of repo, git remote -v}
+\label{sec:org1b820ef}
+\subsection{remove all files that are untracked, git clean -f}
+\label{sec:org38333c7}
+\subsection{how to push local repo to remote repo,}
+\label{sec:org25505fb}
+\subsubsection{git status}
+\label{sec:org1e5f2ef}
+\subsubsection{git add --all (for all changes)}
+\label{sec:org2ad53da}
+\subsubsection{git commit (do commit procedure above)}
+\label{sec:org5cb9f90}
+\subsubsection{git pull origin <branch>}
+\label{sec:org5ab92e4}
+\subsubsection{git push origin <branch>}
+\label{sec:orga69771e}
+\subsection{create branch from local repo, git branch <newbranch>}
+\label{sec:org422ac62}
+\subsection{delete local branch from local repo, git branch -d <branch> (-D forces)}
+\label{sec:org8838993}
+\subsection{see all branches, git branch -a}
+\label{sec:org3c38faf}
+\subsection{change branch, git checkout <differentBranch>}
+\label{sec:orgba9be19}
+\subsection{go to remote branch version of local repo, git checkout --track origin/<branch>}
+\label{sec:org18c7c15}
+\subsection{delete remote branch, git push branch origin --delete <branch>}
+\label{sec:orgd05f8e1}
+\subsection{specify a new remote repo (ie upstream), git remote add upstream <remoteRepo>}
+\label{sec:orgc8f87b2}
+\subsection{set up upstream where push will default, git push --set-upstream origin <branch>}
+\label{sec:org60d078a}
+\subsection{block push to a remote repo, git remote set-url --push <remoterepo> <messagereminder>}
+\label{sec:orgb87e4e4}
+\subsection{replace remote repo (ie upstream), git remote set-url upstream <URLforRemoteRepo>}
+\label{sec:org44d31c1}
+\subsection{rename current branch, git branch -m <newbranchname>}
+\label{sec:org443e430}
+\subsection{how to create new branch in local repo and push to remote repo,}
+\label{sec:orgd3b8dcd}
+\subsubsection{git branch <newbranch>}
+\label{sec:org2767cf4}
+\subsubsection{git checkout <newbranch>}
+\label{sec:orgde18a97}
+\subsubsection{git pull origin <newbranch>}
+\label{sec:org97a084c}
+\subsubsection{git push origin <newbranch>}
+\label{sec:org43bb6cc}
+\subsection{look at project history, git log --oneline}
+\label{sec:orgf528da1}
+\subsection{see what is different between repo and open submodule, git diff --cached --submodule}
+\label{sec:org3242484}
+\subsection{when copying a directory (ie submodule) into your main directory and this submodule is already part of a different repo do the following,}
+\label{sec:orga6700fd}
+\subsubsection{git submodule status (to see if any submodules heads are not your repo)}
+\label{sec:org3dd7677}
+\subsubsection{cd <submodule>}
+\label{sec:orge0ade86}
+\begin{enumerate}
+\item git remote -v (to see which repo submodule is in)
+\label{sec:orga9ffda3}
+\item git remote set-url origin \url{https://github.com/}<username>/<repo> (will point submodule to your repo)
+\label{sec:org391ef0d}
+\item git remote -v (you should see origin now assigned to your repo)
+\label{sec:org743a38a}
+\item cd ../<outofsubmodule>
+\label{sec:org1374159}
+\end{enumerate}
+\subsubsection{git rm --cached <submodule>}
+\label{sec:orgf5bd7de}
+\subsubsection{git status (check to make sure your submodule is untracked)}
+\label{sec:org1b816a7}
+\subsubsection{git commit}
+\label{sec:org43df9ee}
+\subsubsection{git push}
+\label{sec:orgfa7aaa4}
+\subsubsection{git submodule status (your submodule should no longer be on here because it is no longer in your repo, only locally accessible)}
+\label{sec:org824b039}
+\subsubsection{git add <submodule>}
+\label{sec:orgcea6cbe}
+\subsubsection{git commit}
+\label{sec:orgf1e8667}
+\subsubsection{git push}
+\label{sec:orgc2942f0}
+\subsubsection{git submodule status (double check the submodule is properly in your repo now)}
+\label{sec:orgee97ee5}
+\section{Linux Commands}
+\label{sec:orga6e5c73}
+\subsection{suspend current activity, C-z}
+\label{sec:orgd7dce0b}
+\subsection{see all running jobs in terminal, jobs}
+\label{sec:orgd8c5632}
+\subsection{resume suspended activity in foreground, fg \%\# (where \# is job number)}
+\label{sec:orgbb3011c}
+\subsection{resume suspended activity in background, bg \%\# (where \# is job number)}
+\label{sec:org86b0ebf}
+\subsection{kill a job, kill \%\# (where \# is job number)}
+\label{sec:org7a7b098}
+\subsection{find file in directory, find -name "<filename>"}
+\label{sec:org753abe1}
+\subsection{make python or shell script work, chmod u+x <script>}
+\label{sec:org1379a25}
+\subsection{run python script, python <script>.py}
+\label{sec:org1c540fc}
+\subsection{see size of file, ls -ltrh}
+\label{sec:org839dcf1}
+\subsection{see path of directories, ls -la}
+\label{sec:org6e261f9}
+\subsection{see amount of data processes, top -u <username>}
+\label{sec:org4578d49}
+\subsection{see last commands, history}
+\label{sec:orge5c9582}
+\subsection{give anyone permission to edit home directory, chmod o+rw /home/<username> (works for individual directories and files)}
+\label{sec:org66d3865}
+\subsection{take away permission to edit home directory, chmod o-rw /home/<username> (works for individual directories and files)}
+\label{sec:org94157f3}
+\subsection{to give permission to members of group to read home directory, drwxr-x---}
+\label{sec:org12009fe}
+\subsection{by default jlab has most secure permissions on home directory, drwx------}
+\label{sec:org49215e5}
+\subsection{procedures (ie source root version) automatically on login, emacs \textasciitilde{}/.login}
+\label{sec:org42fdb83}
+\section{Batch Job Commands}
+\label{sec:orgcd48d7e}
+\subsection{run batchscript, jsub <batchscript>}
+\label{sec:org4e3562e}
+\subsection{find where files about batch are found (e.g. **.err), ls \textasciitilde{}/.farm\(_{\text{out}}\)/}
+\label{sec:orgd430d37}
+\subsection{see job info, jobinfo <jobindex\#>}
+\label{sec:org88a2383}
+\subsection{cancel job, jkill <jobindex\#>}
+\label{sec:org7da64bb}
+\subsection{cancel all jobs, jkill 0}
+\label{sec:orgd1e58d6}
+\subsection{see progress of jobs, jobstat -u <username>}
+\label{sec:org348a4fb}
+\end{document}
