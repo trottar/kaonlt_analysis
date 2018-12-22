@@ -1,0 +1,33 @@
+(package-initialize)
+;;(require 'org-bullets)
+;;(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(Custom-mode-hook (quote (ignore)))
+ '(custom-buffer-done-kill nil)
+ '(custom-enabled-themes (quote (misterioso)))
+ '(global-auto-revert-mode t)
+ '(ido-enable-flex-matching t)
+ '(ido-mode (quote both) nil (ido))
+ '(inhibit-startup-screen t)
+ '(menu-bar-mode nil)
+ '(org-hide-macro-markers nil)
+ '(org-highlight-latex-and-related (quote (latex)))
+ '(org-level-color-stars-only nil)
+ '(org-pretty-entities t)
+ '(server-mode t)
+ '(term-scroll-to-bottom-on-output t)
+ '(tool-bar-mode nil)
+ '(uniquify-buffer-name-style (quote post-forward) nil (uniquify))
+ '(xterm-mouse-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
+ '(custom-button ((t (:background "black" :foreground "white smoke" :box (:line-width 2 :color "black" :style released-button))))))
