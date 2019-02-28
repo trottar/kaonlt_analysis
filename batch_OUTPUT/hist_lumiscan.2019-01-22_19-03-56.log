@@ -1,0 +1,349 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5151
+
+Job 1/13
+Running trotta_lumiscanJob.txt for 5151
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131143</index><jobIndex>62849696</jobIndex></request></jsub>
+ 
+5151 has an AugerID of 62849696
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5152
+
+Job 2/13
+Running trotta_lumiscanJob.txt for 5152
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131170</index><jobIndex>62849723</jobIndex></request></jsub>
+ 
+5152 has an AugerID of 62849723
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5153
+
+Job 3/13
+Running trotta_lumiscanJob.txt for 5153
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131198</index><jobIndex>62849751</jobIndex></request></jsub>
+ 
+5153 has an AugerID of 62849751
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5164
+
+Job 4/13
+Running trotta_lumiscanJob.txt for 5164
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131227</index><jobIndex>62849780</jobIndex></request></jsub>
+ 
+5164 has an AugerID of 62849780
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5165
+
+Job 5/13
+Running trotta_lumiscanJob.txt for 5165
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131262</index><jobIndex>62849815</jobIndex></request></jsub>
+ 
+5165 has an AugerID of 62849815
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5295
+
+Job 6/13
+Running trotta_lumiscanJob.txt for 5295
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131295</index><jobIndex>62849848</jobIndex></request></jsub>
+ 
+5295 has an AugerID of 62849848
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5297
+
+Job 7/13
+Running trotta_lumiscanJob.txt for 5297
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131312</index><jobIndex>62849865</jobIndex></request></jsub>
+ 
+5297 has an AugerID of 62849865
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5298
+
+Job 8/13
+Running trotta_lumiscanJob.txt for 5298
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131327</index><jobIndex>62849880</jobIndex></request></jsub>
+ 
+5298 has an AugerID of 62849880
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5299
+
+Job 9/13
+Running trotta_lumiscanJob.txt for 5299
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131343</index><jobIndex>62849896</jobIndex></request></jsub>
+ 
+5299 has an AugerID of 62849896
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5300
+
+Job 10/13
+Running trotta_lumiscanJob.txt for 5300
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131360</index><jobIndex>62849913</jobIndex></request></jsub>
+ 
+5300 has an AugerID of 62849913
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5301
+
+Job 11/13
+Running trotta_lumiscanJob.txt for 5301
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131378</index><jobIndex>62849931</jobIndex></request></jsub>
+ 
+5301 has an AugerID of 62849931
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5302
+
+Job 12/13
+Running trotta_lumiscanJob.txt for 5302
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131397</index><jobIndex>62849950</jobIndex></request></jsub>
+ 
+5302 has an AugerID of 62849950
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5303
+
+Job 13/13
+Running trotta_lumiscanJob.txt for 5303
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30131414</index><jobIndex>62849967</jobIndex></request></jsub>
+ 
+5303 has an AugerID of 62849967
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+###############################################################################################################
+############################################ END OF JOB SUBMISSIONS ###########################################
+###############################################################################################################
+ 
+5151 has an AugerID of 62849696
+5152 has an AugerID of 62849723
+5153 has an AugerID of 62849751
+5164 has an AugerID of 62849780
+5165 has an AugerID of 62849815
+5295 has an AugerID of 62849848
+5297 has an AugerID of 62849865
+5298 has an AugerID of 62849880
+5299 has an AugerID of 62849896
+5300 has an AugerID of 62849913
+5301 has an AugerID of 62849931
+5302 has an AugerID of 62849950
+5303 has an AugerID of 62849967
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  --         --         hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  --         --         hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  --         --         hallc     
+62849848  trottar     Q    priority    --         ...umiscan_5295   Jan 22 19:10  --         --         hallc     
+62849865  trottar     Q    priority    --         ...umiscan_5297   Jan 22 19:10  --         --         hallc     
+62849880  trottar     Q    priority    --         ...umiscan_5298   Jan 22 19:10  --         --         hallc     
+62849896  trottar     A    priority    --         ...umiscan_5299   Jan 22 19:08  --         --         hallc     
+62849913  trottar     A    priority    --         ...umiscan_5300   Jan 22 19:09  --         --         hallc     
+62849931  trottar     A    priority    --         ...umiscan_5301   Jan 22 19:10  --         --         hallc     
+62849950  trottar     A    priority    --         ...umiscan_5302   Jan 22 19:10  --         --         hallc     
+62849967  trottar     A    priority    --         ...umiscan_5303   Jan 22 19:11  --         --         hallc     
+ 
+There are 11 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:01:16   00:01:29   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:01:16   00:01:29   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:01:15   00:01:29   hallc     
+62849848  trottar     R    priority    farm12009  ...umiscan_5295   Jan 22 19:10  --         --         hallc     
+62849865  trottar     R    priority    farm12009  ...umiscan_5297   Jan 22 19:10  --         --         hallc     
+62849880  trottar     R    priority    farm12009  ...umiscan_5298   Jan 22 19:10  --         --         hallc     
+62849896  trottar     A    priority    --         ...umiscan_5299   Jan 22 19:08  --         --         hallc     
+62849913  trottar     A    priority    --         ...umiscan_5300   Jan 22 19:09  --         --         hallc     
+62849931  trottar     A    priority    --         ...umiscan_5301   Jan 22 19:10  --         --         hallc     
+62849950  trottar     A    priority    --         ...umiscan_5302   Jan 22 19:10  --         --         hallc     
+62849967  trottar     A    priority    --         ...umiscan_5303   Jan 22 19:11  --         --         hallc     
+ 
+There are 8 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:01:16   00:01:29   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:03:31   00:03:44   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:03:31   00:03:44   hallc     
+62849896  trottar     Q    priority    --         ...umiscan_5299   Jan 22 19:15  --         --         hallc     
+62849913  trottar     Q    priority    --         ...umiscan_5300   Jan 22 19:15  --         --         hallc     
+62849931  trottar     Q    priority    --         ...umiscan_5301   Jan 22 19:15  --         --         hallc     
+62849950  trottar     Q    priority    --         ...umiscan_5302   Jan 22 19:15  --         --         hallc     
+62849967  trottar     Q    priority    --         ...umiscan_5303   Jan 22 19:15  --         --         hallc     
+ 
+There are 8 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:01:16   00:01:29   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:05:46   00:05:59   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:05:46   00:05:59   hallc     
+62849896  trottar     Q    priority    --         ...umiscan_5299   Jan 22 19:15  --         --         hallc     
+62849913  trottar     Q    priority    --         ...umiscan_5300   Jan 22 19:15  --         --         hallc     
+62849931  trottar     Q    priority    --         ...umiscan_5301   Jan 22 19:15  --         --         hallc     
+62849950  trottar     Q    priority    --         ...umiscan_5302   Jan 22 19:15  --         --         hallc     
+62849967  trottar     Q    priority    --         ...umiscan_5303   Jan 22 19:15  --         --         hallc     
+ 
+There are 8 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:01:16   00:01:29   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:08:01   00:08:14   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:08:01   00:08:14   hallc     
+62849896  trottar     Q    priority    --         ...umiscan_5299   Jan 22 19:15  --         --         hallc     
+62849913  trottar     Q    priority    --         ...umiscan_5300   Jan 22 19:15  --         --         hallc     
+62849931  trottar     Q    priority    --         ...umiscan_5301   Jan 22 19:15  --         --         hallc     
+62849950  trottar     Q    priority    --         ...umiscan_5302   Jan 22 19:15  --         --         hallc     
+62849967  trottar     Q    priority    --         ...umiscan_5303   Jan 22 19:15  --         --         hallc     
+ 
+There are 8 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:01:16   00:01:29   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:08:01   00:08:14   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:08:01   00:08:14   hallc     
+62849896  trottar     R    priority    farm180127 ...umiscan_5299   Jan 22 19:15  --         --         hallc     
+62849913  trottar     Q    priority    --         ...umiscan_5300   Jan 22 19:15  --         --         hallc     
+62849931  trottar     Q    priority    --         ...umiscan_5301   Jan 22 19:15  --         --         hallc     
+62849950  trottar     Q    priority    --         ...umiscan_5302   Jan 22 19:15  --         --         hallc     
+62849967  trottar     Q    priority    --         ...umiscan_5303   Jan 22 19:15  --         --         hallc     
+ 
+There are 7 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:01:16   00:01:29   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:08:01   00:08:14   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:08:01   00:08:14   hallc     
+ 
+There are 3 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:12:31   00:12:44   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:12:31   00:12:44   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:12:32   00:12:44   hallc     
+ 
+There are 3 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:12:31   00:12:44   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:12:31   00:12:44   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:12:32   00:12:44   hallc     
+ 
+There are 3 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849696  trottar     R    priority    farm180127 ...umiscan_5151   Jan 22 19:06  00:15:31   00:15:44   hallc     
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:14:46   00:14:59   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:12:32   00:12:44   hallc     
+ 
+There are 3 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:17:01   00:17:14   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:12:32   00:12:44   hallc     
+ 
+There are 2 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:19:16   00:19:29   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:12:32   00:12:44   hallc     
+ 
+There are 2 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:19:16   00:19:29   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:12:32   00:12:44   hallc     
+ 
+There are 2 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:19:16   00:19:29   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:12:32   00:12:44   hallc     
+ 
+There are 2 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849723  trottar     R    priority    farm180127 ...umiscan_5152   Jan 22 19:06  00:23:46   00:23:59   hallc     
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:23:46   00:23:59   hallc     
+ 
+There are 2 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:25:46   00:25:59   hallc     
+ 
+There is 1 job remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:25:46   00:25:59   hallc     
+ 
+There is 1 job remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:25:46   00:25:59   hallc     
+ 
+There is 1 job remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62849751  trottar     R    priority    farm180127 ...umiscan_5153   Jan 22 19:06  00:29:46   00:29:59   hallc     
+ 
+There is 1 job remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+ 
+There are 0 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_
+|ID-62849696 (run 5151) has printed batch job information to file
+|Amount of allocated memory used: 1339980kb/2500mb
+_
+|ID-62849723 (run 5152) has printed batch job information to file
+|Amount of allocated memory used: 1475456kb/2500mb
+_
+|ID-62849751 (run 5153) has printed batch job information to file
+|Amount of allocated memory used: 1714252kb/2500mb
+_
+|ID-62849780 (run 5164) has printed batch job information to file
+|Amount of allocated memory used: 0kb/2500mb
+_
+|ID-62849815 (run 5165) has printed batch job information to file
+|Amount of allocated memory used: 897964kb/2500mb
+_
+|ID-62849848 (run 5295) has printed batch job information to file
+|Amount of allocated memory used: 115188kb/2500mb
+_
+|ID-62849865 (run 5297) has printed batch job information to file
+|Amount of allocated memory used: 0kb/2500mb
+_
+|ID-62849880 (run 5298) has printed batch job information to file
+|Amount of allocated memory used: 604304kb/2500mb
+_
+|ID-62849896 (run 5299) has printed batch job information to file
+|Amount of allocated memory used: 0kb/2500mb
+_
+|ID-62849913 (run 5300) has printed batch job information to file
+|Amount of allocated memory used: 0kb/2500mb
+_
+|ID-62849931 (run 5301) has printed batch job information to file
+|Amount of allocated memory used: 611484kb/2500mb
+_
+|ID-62849950 (run 5302) has printed batch job information to file
+|Amount of allocated memory used: 702732kb/2500mb
+_
+|ID-62849967 (run 5303) has printed batch job information to file
+|Amount of allocated memory used: 897936kb/2500mb

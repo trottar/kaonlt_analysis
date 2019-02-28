@@ -1,0 +1,34 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Errors...
+ 
+Error in <THaFormula::Compile>:  Bad numerical expression : ":SHMSaerogelgainfatorsfromLH2production4965"
+Error in <THaCut::Compile>:  Bad numerical expression : "ALL_events_NO_EDTM"
+Error in <THaCutList::Define>: expression error, cut not created: RawDecode_master ALL_events_NO_EDTM block: RawDecode
+Warning in <THaCutList::Load>: 1 cut(s) could not be defined, check input file DEF-files/COIN/PRODUCTION/CUTS/coin_production_cuts.def
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Job info...
+ 
+
+Auger JobId: 62849723 [PBS JobId: 48352073]
+
+01/22/2019 19:04:34  A     Name=lumiscan_5152;User=trottar;queue=priority
+01/22/2019 19:11:18  A     Stagin started
+01/22/2019 19:11:18  A     Job started
+01/22/2019 19:37:14  A     Job started
+01/22/2019 19:37:14  A     Job completed
+
+Job: 48352073.farmpbs14
+
+01/22/2019 19:06:47  S    enqueuing into priority, state 2 hop 1
+01/22/2019 19:06:47  S    Holds u released at request of trottar@farmpbs14
+01/22/2019 19:06:47  A    queue=priority
+01/22/2019 19:11:17  S    Job Run at request of root@farmpbs14
+01/22/2019 19:11:17  A    user=trottar group=enp account=hallc jobname=lumiscan_5152 queue=priority ctime=1548202007 qtime=1548202007 etime=1548202007 start=1548202277 owner=trottar@farmpbs14 exec_host=farm180127/2+farm180127/3 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=04:00:00 
+01/22/2019 19:37:16  S    Exit_status=0 resources_used.cput=00:25:44 resources_used.mem=725328kb resources_used.vmem=1475456kb resources_used.walltime=00:25:59
+01/22/2019 19:37:16  S    on_job_exit valid pjob: 48352073.farmpbs14 (substate=50)
+01/22/2019 19:37:16  S    dequeuing from priority, state COMPLETE
+01/22/2019 19:37:16  A    user=trottar group=enp account=hallc jobname=lumiscan_5152 queue=priority ctime=1548202007 qtime=1548202007 etime=1548202007 start=1548202277 owner=trottar@farmpbs14 exec_host=farm180127/2+farm180127/3 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=04:00:00 session=36910 end=1548203836 Exit_status=0 resources_used.cput=00:25:44 resources_used.mem=725328kb resources_used.vmem=1475456kb resources_used.walltime=00:25:59
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
