@@ -18,7 +18,7 @@ void get_EvtNum(Int_t runNum = 0, Int_t numEvts = 0, TString spec = ""){
   	cin >> spec;
   }
 
-  TString rootfile = "../../ROOTfiles/KaonLT_" + spec + Form("_coin_replay_production_%i_%i",runNum,numEvts);
+  TString rootfile = "$HOME/Analysis/ROOTfiles/KaonLT_" + spec + Form("_coin_replay_production_%i_%i",runNum,numEvts);
 
   TString outputhist;
   outputhist = rootfile + ".root";

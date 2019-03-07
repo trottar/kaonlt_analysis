@@ -12,7 +12,7 @@ from array import array
 target = sys.argv[1]
 #target = "Carbon"
 numRuns = 5
-comment="Clean pion cuts"
+comment="Expanded table"
 
 def getValues() :
 
@@ -41,6 +41,9 @@ def getValues() :
     PS1 = array('f')
     PS3 = array('f')
     TIME = array('f')
+    BCM1 = array('f')
+    BCM2 = array('f')
+    BCM4A = array('f')
     BCM4B = array('f')
     pTRIG1 = array('f')
     pTRIG3 = array('f')
@@ -88,34 +91,39 @@ def getValues() :
             PS3.append(float(data[23]))
             TIME.append(float(data[24]))
             #print("TIME %s" % (TIME))
-            BCM4B.append(float(data[25]))
+            BCM1.append(float(data[25]))
+            BCM2.append(float(data[26]))
+            BCM4A.append(float(data[27]))
+            BCM4B.append(float(data[28]))
             #print("BCM4B %s" % (BCM4B))
-            pTRIG1.append(float(data[26]))
-            pTRIG3.append(float(data[27]))
+            pTRIG1.append(float(data[29]))
+            pTRIG3.append(float(data[30]))
             #comp_time = np.append(,len(),float(data[]))  
             #comp_uncer = np.append(,len(),float(data[])) 
             #HMS_elec = np.append(,len(),float(data[]))   
             #HMS_elecun = np.append(,len(),float(data[])) 
             #SHMS_elec = np.append(,len(),float(data[]))  
             #SHMS_elecun = np.append(,len(),float(data[]))
-            SENT_EDTM.append(float(data[28]))
+            SENT_EDTM.append(float(data[31]))
             #print("EDTM %s" % (SENT_EDTM))
  
     f.close()
 
-    return[run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM4B,pTRIG1,pTRIG3, SENT_EDTM]
+    return[run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM1,BCM2,BCM4A,BCM4B,pTRIG1,pTRIG3,SENT_EDTM]
 
 
 def findVar() :
 
-    [run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM4B,pTRIG1,pTRIG3, SENT_EDTM] = getValues()
+    [run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM1,BCM2,BCM4A,BCM4B,pTRIG1,pTRIG3,SENT_EDTM] = getValues()
 
-    current = array('f',[x/y for x,y in zip(BCM4B,TIME)])
+    current = array('f',[x/y for x,y in zip(BCM4A,TIME)])
     rate_HMS = array('f',[x/y for x,y in zip(HMS_EVENTS,TIME)])
     rate_SHMS = array('f',[x/y for x,y in zip(SHMS_EVENTS,TIME)])
     cpuLT_uncer = array('f',[math.sqrt(x+y)/(x+y) for x,y in zip(TRIG1_cut,TRIG3_cut)])
     cpuLT_HMS = array('f',[x/((y-z)/p) for x,y,z,p in zip(TRIG3_cut,pTRIG3,SENT_EDTM,PS3)])
     cpuLT_SHMS = array('f',[x/((y-z)/p) for x,y,z,p in zip(TRIG1_cut,pTRIG1,SENT_EDTM,PS1)])
+    #cpuLT_HMS = array('f',[(x-z)/((y-z)/p) for x,y,z,p in zip(TRIG3_cut,pTRIG3,SENT_EDTM,PS3)])
+    #cpuLT_SHMS = array('f',[(x-z)/((y-z)/p) for x,y,z,p in zip(TRIG1_cut,pTRIG1,SENT_EDTM,PS1)])
     uncerEvts_HMS = array('f',[math.sqrt(x)/x for x in HMS_EVENTS])
     uncerEvts_SHMS = array('f',[math.sqrt(x)/x for x in SHMS_EVENTS])
 
@@ -128,12 +136,12 @@ def findVar() :
 
 def calcYield() :
 
-    [run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM4B,pTRIG1,pTRIG3, SENT_EDTM] = getValues()
+    [run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM1,BCM2,BCM4A,BCM4B,pTRIG1,pTRIG3,SENT_EDTM] = getValues()
 
     [current,rate_HMS,rate_SHMS,cpuLT_HMS,cpuLT_uncer,cpuLT_SHMS,uncerEvts_HMS,uncerEvts_SHMS] = findVar()
 
-    yield_HMS = array('f',[(x*y)/(t*u*v) for x,y,t,u,v in zip(HMS_EVENTS,PS3,BCM4B,cpuLT_HMS,HMS_etrack)])
-    yield_SHMS = array('f',[(x*y)/(t*u*v) for x,y,t,u,v in zip(SHMS_EVENTS,PS1,BCM4B,cpuLT_SHMS,SHMS_pitrack)])
+    yield_HMS = array('f',[(x*y)/(t*u*v) for x,y,t,u,v in zip(HMS_EVENTS,PS3,BCM4A,cpuLT_HMS,HMS_etrack)])
+    yield_SHMS = array('f',[(x*y)/(t*u*v) for x,y,t,u,v in zip(SHMS_EVENTS,PS1,BCM4A,cpuLT_SHMS,SHMS_pitrack)])
     yieldRel_HMS = array('f',[x/yield_HMS[0] for x in yield_HMS])
     yieldRel_SHMS = array('f',[x/yield_SHMS[0] for x in yield_SHMS])
 
@@ -146,7 +154,7 @@ def calcYield() :
 
 def lumiTable(hms_rows,shms_rows):
 
-    [run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM4B,pTRIG1,pTRIG3, SENT_EDTM] = getValues()
+    [run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM1,BCM2,BCM4A,BCM4B,pTRIG1,pTRIG3,SENT_EDTM] = getValues()
 
     sep = '|' 
     left = '        '
@@ -230,14 +238,14 @@ def lumiTable(hms_rows,shms_rows):
 
 def main() :
 
-    [run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM4B,pTRIG1,pTRIG3, SENT_EDTM] = getValues()
+    [run_num,HMS_EVENTS,HMS_EVENTSun,SHMS_EVENTS,SHMS_EVENTSun,HMS_track,HMS_trackun,HMS_etrack,HMS_etrackun,SHMS_track,SHMS_trackun,SHMS_hadtrack,SHMS_hadtrackun,SHMS_pitrack,SHMS_pitrackun,SHMS_Ktrack,SHMS_Ktrackun,SHMS_ptrack,SHMS_ptrackun,ACC_EDTM,TRIG1_cut,TRIG3_cut,PS1,PS3,TIME,BCM1,BCM2,BCM4A,BCM4B,pTRIG1,pTRIG3,SENT_EDTM] = getValues()
 
     [current,rate_HMS,rate_SHMS,cpuLT_HMS,cpuLT_uncer,cpuLT_SHMS,uncerEvts_HMS,uncerEvts_SHMS] = findVar()
 
     [yield_HMS,yield_SHMS,yieldRel_HMS,yieldRel_SHMS] = calcYield()
 
 
-    foutname = 'OUTPUT/plot_YieldvsCurrent_' + target + '_%i' % (run_num[0]) + '-%i' % (run_num[numRuns-1]) + '.png'
+    foutname = 'OUTPUT/plot_YieldvsCurrent_' + target + '_%i' % (run_num[0]) + '-%i' % (run_num[numRuns-1]) + '_test.png'
 
     relYieldPlot = plt.figure()
 
@@ -245,7 +253,7 @@ def main() :
     plt.subplot(1,2,1)    
     plt.grid(zorder=1)
     plt.xlim(0,60)
-    plt.ylim(0.98,1.02)
+    #plt.ylim(0.98,1.02)
     plt.plot([0,60], [1,1], 'r-',zorder=2)
     plt.errorbar(current,yieldRel_HMS,yerr=uncerEvts_HMS,color='black',linestyle='None',zorder=3)
     plt.scatter(current,yieldRel_HMS,color='blue',zorder=4)
@@ -264,7 +272,7 @@ def main() :
     plt.subplot(1,2,2)
     plt.grid(zorder=1)
     plt.xlim(0,60)
-    plt.ylim(0.94,1.06)
+    #plt.ylim(0.94,1.06)
     plt.plot([0,60], [1,1], 'r-',zorder=2)
     plt.errorbar(current,yieldRel_SHMS,yerr=uncerEvts_SHMS,color='black',linestyle='None',zorder=3)
     plt.scatter(current,yieldRel_SHMS,color='blue',zorder=4)
@@ -281,25 +289,25 @@ def main() :
 
 
     plt.tight_layout()
-    #plt.show()
+    plt.show()
     relYieldPlot.savefig(foutname)
 
-    hms_tuple = namedtuple('hms_tuple',['RunNumber','Current','BeamTime','Charge','HMS_count','HMS_countuncer','Rate','PS3','Yield_HMS','RelY_HMS','Uncer_HMS','TrEff_HMS','TrEffuncer','CPULT','CPULTuncer'])
+    hms_tuple = namedtuple('hms_tuple',['RunNumber','Current_BCM4A','BeamTime','Charge_BCM1','Charge_BCM2','Charge_BCM4A','Charge_BCM4B','scaler_ELreal','HMS_count','HMS_countuncer','Rate','PS3','Yield_HMS','RelY_HMS','Uncer_HMS','TrEff_HMS','TrEffuncer','CPULT','CPULTuncer'])
 
     hms_data = []
     tot_hms = []
 
     for i in range(numRuns) :
-        hms_data.append(hms_tuple(run_num[i],round(current[i],2),round(TIME[i],2),round(BCM4B[i],2),round(HMS_EVENTS[i],2),round(HMS_EVENTSun[i],2),round(rate_HMS[i],2),round(PS3[i],2),round(yield_HMS[i],2),round(yieldRel_HMS[i],2),round(uncerEvts_HMS[i],2),round(HMS_etrack[i],2),round(HMS_etrackun[i],2),round(cpuLT_HMS[i],2),round(cpuLT_uncer[i],2)))
+        hms_data.append(hms_tuple(run_num[i],round(current[i],2),round(TIME[i],2),round(BCM1[i],2),round(BCM2[i],2),round(BCM4A[i],2),round(BCM4B[i],2),round(pTRIG3[i],2),round(HMS_EVENTS[i],2),round(HMS_EVENTSun[i],2),round(rate_HMS[i],2),round(PS3[i],2),round(yield_HMS[i],2),round(yieldRel_HMS[i],2),round(uncerEvts_HMS[i],2),round(HMS_etrack[i],2),round(HMS_etrackun[i],2),round(cpuLT_HMS[i],2),round(cpuLT_uncer[i],2)))
         tot_hms.append(hms_data[i])
 
-    shms_tuple = namedtuple('shms_tuple',['RunNumber','Current','BeamTime','Charge','SHMS_count','SHMS_countuncer','Rate','PS3','Yield_SHMS','RelY_SHMS','Uncer_SHMS','TrEff_SHMS','TrEffuncer','CPULT','CPULTuncer'])
+    shms_tuple = namedtuple('shms_tuple',['RunNumber','Current_BCM4A','BeamTime','Charge_BCM1','Charge_BCM2','Charge_BCM4A','Charge_BCM4B','scaler_3of4','SHMS_count','SHMS_countuncer','Rate','PS3','Yield_SHMS','RelY_SHMS','Uncer_SHMS','TrEff_SHMS','TrEffuncer','CPULT','CPULTuncer'])
 
     shms_data = []
     tot_shms = []
 
     for i in range(numRuns) :
-        shms_data.append(shms_tuple(run_num[i],round(current[i],2),round(TIME[i],2),round(BCM4B[i],2),round(SHMS_EVENTS[i],2),round(SHMS_EVENTSun[i],2),round(rate_SHMS[i],2),round(PS3[i],2),round(yield_SHMS[i],2),round(yieldRel_SHMS[i],2),round(uncerEvts_SHMS[i],2),round(SHMS_pitrack[i],2),round(SHMS_pitrackun[i],2),round(cpuLT_SHMS[i],2),round(cpuLT_uncer[i],2)))
+        shms_data.append(shms_tuple(run_num[i],round(current[i],2),round(TIME[i],2),round(BCM1[i],2),round(BCM2[i],2),round(BCM4A[i],2),round(BCM4B[i],2),round(pTRIG1[i],2),round(SHMS_EVENTS[i],2),round(SHMS_EVENTSun[i],2),round(rate_SHMS[i],2),round(PS3[i],2),round(yield_SHMS[i],2),round(yieldRel_SHMS[i],2),round(uncerEvts_SHMS[i],2),round(SHMS_pitrack[i],2),round(SHMS_pitrackun[i],2),round(cpuLT_SHMS[i],2),round(cpuLT_uncer[i],2)))
         tot_shms.append(shms_data[i])
 
     lumiTable([tot_hms[0],tot_hms[1],tot_hms[2],tot_hms[3],tot_hms[4]],[tot_shms[0],tot_shms[1],tot_shms[2],tot_shms[3],tot_shms[4]])
