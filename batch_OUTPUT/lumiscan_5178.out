@@ -3,164 +3,29 @@
 Errors...
  
 Error in <THaFormula::Compile>:  Bad numerical expression : ":SHMSaerogelgainfatorsfromLH2production4965"
-THaCodaFile: ERROR while trying to open ./cache/coin_all_05178.dat: No such file or directory
-
- *** Break *** segmentation violation
-
-
-
-===========================================================
-There was a crash.
-This is the entire stack trace of all threads:
-===========================================================
-#0  0x00007fb99215803c in waitpid () from /lib64/libc.so.6
-#1  0x00007fb9920dd092 in do_system () from /lib64/libc.so.6
-#2  0x00007fb995f0cae1 in Exec (shellcmd=<optimized out>, this=0x11234f0) at /group/halla/analysis/rootbuild/ifarm1402/root-6.08.00/core/unix/src/TUnixSystem.cxx:2116
-#3  TUnixSystem::StackTrace (this=0x11234f0) at /group/halla/analysis/rootbuild/ifarm1402/root-6.08.00/core/unix/src/TUnixSystem.cxx:2403
-#4  0x00007fb995f0f1fc in TUnixSystem::DispatchSignals (this=0x11234f0, sig=kSigSegmentationViolation) at /group/halla/analysis/rootbuild/ifarm1402/root-6.08.00/core/unix/src/TUnixSystem.cxx:3661
-#5  <signal handler called>
-#6  0x00007fb997289098 in THcAnalyzer::LoadInfo() () from /home/trottar/Analysis/hcana/libHallC.so
-#7  0x00007fb997289697 in THcAnalyzer::PrintReport(char const*, char const*) () from /home/trottar/Analysis/hcana/libHallC.so
-#8  0x00007fb9977537bb in ?? ()
-#9  0x00007fb997755d6f in ?? ()
-#10 0x000000000000002a in ?? ()
-#11 0x00007fb99755f465 in ?? () from /lib64/ld-linux-x86-64.so.2
-#12 0x00007fb99211a87c in malloc () from /lib64/libc.so.6
-#13 0x00007fb997552014 in _dl_signal_error () from /lib64/ld-linux-x86-64.so.2
-#14 0x0000000005efb830 in ?? ()
-#15 0x0000000005efc400 in ?? ()
-#16 0x00007fb99729370a in ?? () from /home/trottar/Analysis/hcana/libHallC.so
-#17 0x0000000005efc400 in ?? ()
-#18 0x000000000268ee10 in ?? ()
-#19 0x0000000005efb830 in ?? ()
-#20 0x0000000005efb830 in ?? ()
-#21 0x0000000005efb830 in ?? ()
-#22 0x0000000005efb830 in ?? ()
-#23 0x0000000005efb830 in ?? ()
-#24 0x0000000005efb830 in ?? ()
-#25 0x0000000005efb830 in ?? ()
-#26 0x000000000268eed0 in ?? ()
-#27 0x0000000005efb470 in ?? ()
-#28 0x0000000005efb470 in ?? ()
-#29 0x0000000005efb470 in ?? ()
-#30 0x0000000005efb470 in ?? ()
-#31 0x0000000005efb470 in ?? ()
-#32 0x0000000005efb470 in ?? ()
-#33 0x0000000005efb470 in ?? ()
-#34 0x0000000005efb470 in ?? ()
-#35 0x0000000005efb470 in ?? ()
-#36 0x0000000005efb470 in ?? ()
-#37 0x000000000268ee70 in ?? ()
-#38 0x0000000005efb120 in ?? ()
-#39 0x00007fb9972ab9ac in THcHodoEff::Process(THaEvData const&) () from /home/trottar/Analysis/hcana/libHallC.so
-#40 0x0000000005efb120 in ?? ()
-#41 0x000000000268ee70 in ?? ()
-#42 0x0000000002757ac0 in ?? ()
-#43 0x00007fb996f144cc in ?? () from /home/trottar/Analysis/hcana/podd/libHallA.so.1.7
-#44 0x0000000002757ac0 in ?? ()
-#45 0x000000000268ee70 in ?? ()
-#46 0x0000000002757860 in ?? ()
-#47 0x00007fb9972a34e0 in ?? () from /home/trottar/Analysis/hcana/libHallC.so
-#48 0x0000000002757860 in ?? ()
-#49 0x000000000268ee70 in ?? ()
-#50 0x0000000002757650 in ?? ()
-#51 0x00007fb996f0f194 in ?? () from /home/trottar/Analysis/hcana/podd/libHallA.so.1.7
-#52 0x0000000002757650 in ?? ()
-#53 0x000000000268ee10 in ?? ()
-#54 0x000000000271e1f0 in ?? ()
-#55 0x000000000271e1f0 in ?? ()
-#56 0x000000009755f465 in ?? ()
-#57 0x00007fb996ea533a in non-virtual thunk to THaSpectrometer::~THaSpectrometer() () at src/THaSpectrometer.h:27
-#58 0x0000000000000000 in ?? ()
-===========================================================
-
-
-The lines below might hint at the cause of the crash.
-You may get help by asking at the ROOT forum http://root.cern.ch/forum.
-Only if you are really convinced it is a bug in ROOT then please submit a
-report at http://root.cern.ch/bugs. Please post the ENTIRE stack trace
-from above as an attachment in addition to anything else
-that might help us fixing this issue.
-===========================================================
-#6  0x00007fb997289098 in THcAnalyzer::LoadInfo() () from /home/trottar/Analysis/hcana/libHallC.so
-#7  0x00007fb997289697 in THcAnalyzer::PrintReport(char const*, char const*) () from /home/trottar/Analysis/hcana/libHallC.so
-#8  0x00007fb9977537bb in ?? ()
-#9  0x00007fb997755d6f in ?? ()
-#10 0x000000000000002a in ?? ()
-#11 0x00007fb99755f465 in ?? () from /lib64/ld-linux-x86-64.so.2
-#12 0x00007fb99211a87c in malloc () from /lib64/libc.so.6
-#13 0x00007fb997552014 in _dl_signal_error () from /lib64/ld-linux-x86-64.so.2
-#14 0x0000000005efb830 in ?? ()
-#15 0x0000000005efc400 in ?? ()
-#16 0x00007fb99729370a in ?? () from /home/trottar/Analysis/hcana/libHallC.so
-#17 0x0000000005efc400 in ?? ()
-#18 0x000000000268ee10 in ?? ()
-#19 0x0000000005efb830 in ?? ()
-#20 0x0000000005efb830 in ?? ()
-#21 0x0000000005efb830 in ?? ()
-#22 0x0000000005efb830 in ?? ()
-#23 0x0000000005efb830 in ?? ()
-#24 0x0000000005efb830 in ?? ()
-#25 0x0000000005efb830 in ?? ()
-#26 0x000000000268eed0 in ?? ()
-#27 0x0000000005efb470 in ?? ()
-#28 0x0000000005efb470 in ?? ()
-#29 0x0000000005efb470 in ?? ()
-#30 0x0000000005efb470 in ?? ()
-#31 0x0000000005efb470 in ?? ()
-#32 0x0000000005efb470 in ?? ()
-#33 0x0000000005efb470 in ?? ()
-#34 0x0000000005efb470 in ?? ()
-#35 0x0000000005efb470 in ?? ()
-#36 0x0000000005efb470 in ?? ()
-#37 0x000000000268ee70 in ?? ()
-#38 0x0000000005efb120 in ?? ()
-#39 0x00007fb9972ab9ac in THcHodoEff::Process(THaEvData const&) () from /home/trottar/Analysis/hcana/libHallC.so
-#40 0x0000000005efb120 in ?? ()
-#41 0x000000000268ee70 in ?? ()
-#42 0x0000000002757ac0 in ?? ()
-#43 0x00007fb996f144cc in ?? () from /home/trottar/Analysis/hcana/podd/libHallA.so.1.7
-#44 0x0000000002757ac0 in ?? ()
-#45 0x000000000268ee70 in ?? ()
-#46 0x0000000002757860 in ?? ()
-#47 0x00007fb9972a34e0 in ?? () from /home/trottar/Analysis/hcana/libHallC.so
-#48 0x0000000002757860 in ?? ()
-#49 0x000000000268ee70 in ?? ()
-#50 0x0000000002757650 in ?? ()
-#51 0x00007fb996f0f194 in ?? () from /home/trottar/Analysis/hcana/podd/libHallA.so.1.7
-#52 0x0000000002757650 in ?? ()
-#53 0x000000000268ee10 in ?? ()
-#54 0x000000000271e1f0 in ?? ()
-#55 0x000000000271e1f0 in ?? ()
-#56 0x000000009755f465 in ?? ()
-#57 0x00007fb996ea533a in non-virtual thunk to THaSpectrometer::~THaSpectrometer() () at src/THaSpectrometer.h:27
-#58 0x0000000000000000 in ?? ()
-===========================================================
-
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Job info...
  
 
-Auger JobId: 61187788 [PBS JobId: 46877805]
+Auger JobId: 63286748 [PBS JobId: 48807263]
 
-12/11/2018 16:14:12  A     Name=lumiscan_5178;User=trottar;queue=prod64
-12/11/2018 16:26:44  A     Stagin started
-12/11/2018 16:26:44  A     Job started
-12/11/2018 16:50:47  A     Job started
-12/11/2018 16:50:47  A     Job completed
+02/06/2019 21:45:02  A     Name=lumiscan_5178;User=trottar;queue=priority
+02/06/2019 23:09:50  A     Stagin started
+02/06/2019 23:09:50  A     Job started
+02/07/2019 00:18:12  A     Job started
+02/07/2019 00:18:12  A     Job completed
 
-Job: 46877805.farmpbs14
+Job: 48807263.farmpbs14
 
-12/11/2018 16:17:41  S    enqueuing into prod64, state 2 hop 1
-12/11/2018 16:17:41  S    Holds u released at request of trottar@farmpbs14
-12/11/2018 16:17:41  A    queue=prod64
-12/11/2018 16:26:06  S    Job Run at request of root@farmpbs14
-12/11/2018 16:26:06  A    user=trottar group=enp account=hallc jobname=lumiscan_5178 queue=prod64 ctime=1544563061 qtime=1544563061 etime=1544563061 start=1544563566 owner=trottar@farmpbs14 exec_host=farm140201/34+farm140201/35 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=24:00:00 
-12/11/2018 16:51:02  S    Exit_status=0 resources_used.cput=00:00:20 resources_used.mem=445412kb resources_used.vmem=1839112kb resources_used.walltime=00:24:56
-12/11/2018 16:51:02  S    on_job_exit valid pjob: 46877805.farmpbs14 (substate=50)
-12/11/2018 16:51:02  S    dequeuing from prod64, state COMPLETE
-12/11/2018 16:51:02  A    user=trottar group=enp account=hallc jobname=lumiscan_5178 queue=prod64 ctime=1544563061 qtime=1544563061 etime=1544563061 start=1544563566 owner=trottar@farmpbs14 exec_host=farm140201/34+farm140201/35 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=24:00:00 session=29248 end=1544565062 Exit_status=0 resources_used.cput=00:00:20 resources_used.mem=445412kb resources_used.vmem=1839112kb resources_used.walltime=00:24:56
+02/06/2019 22:35:08  S    enqueuing into priority, state 2 hop 1
+02/06/2019 22:35:08  S    Holds u released at request of trottar@farmpbs14
+02/06/2019 22:35:08  A    queue=priority
+02/06/2019 23:09:22  S    Job Run at request of root@farmpbs14
+02/06/2019 23:09:22  A    user=trottar group=enp account=hallc jobname=lumiscan_5178 queue=priority ctime=1549510508 qtime=1549510508 etime=1549510508 start=1549512562 owner=trottar@farmpbs14 exec_host=farm180242/2+farm180242/3 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=04:00:00 
+02/07/2019 00:18:13  S    Exit_status=0 resources_used.cput=01:07:24 resources_used.mem=1436356kb resources_used.vmem=2270296kb resources_used.walltime=01:08:51
+02/07/2019 00:18:13  S    on_job_exit valid pjob: 48807263.farmpbs14 (substate=50)
+02/07/2019 00:18:13  S    dequeuing from priority, state COMPLETE
+02/07/2019 00:18:13  A    user=trottar group=enp account=hallc jobname=lumiscan_5178 queue=priority ctime=1549510508 qtime=1549510508 etime=1549510508 start=1549512562 owner=trottar@farmpbs14 exec_host=farm180242/2+farm180242/3 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=04:00:00 session=29580 end=1549516693 Exit_status=0 resources_used.cput=01:07:24 resources_used.mem=1436356kb resources_used.vmem=2270296kb resources_used.walltime=01:08:51
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

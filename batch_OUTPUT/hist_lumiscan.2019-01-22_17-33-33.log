@@ -1,0 +1,204 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5151
+
+Job 1/13
+Running trotta_lumiscanJob.txt for 5151
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127951</index><jobIndex>62846503</jobIndex></request></jsub>
+ 
+5151 has an AugerID of 62846503
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5152
+
+Job 2/13
+Running trotta_lumiscanJob.txt for 5152
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127952</index><jobIndex>62846504</jobIndex></request></jsub>
+ 
+5152 has an AugerID of 62846504
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5153
+
+Job 3/13
+Running trotta_lumiscanJob.txt for 5153
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127953</index><jobIndex>62846505</jobIndex></request></jsub>
+ 
+5153 has an AugerID of 62846505
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5164
+
+Job 4/13
+Running trotta_lumiscanJob.txt for 5164
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127954</index><jobIndex>62846506</jobIndex></request></jsub>
+ 
+5164 has an AugerID of 62846506
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5165
+
+Job 5/13
+Running trotta_lumiscanJob.txt for 5165
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127955</index><jobIndex>62846507</jobIndex></request></jsub>
+ 
+5165 has an AugerID of 62846507
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5295
+
+Job 6/13
+Running trotta_lumiscanJob.txt for 5295
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127956</index><jobIndex>62846508</jobIndex></request></jsub>
+ 
+5295 has an AugerID of 62846508
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5297
+
+Job 7/13
+Running trotta_lumiscanJob.txt for 5297
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127957</index><jobIndex>62846509</jobIndex></request></jsub>
+ 
+5297 has an AugerID of 62846509
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5298
+
+Job 8/13
+Running trotta_lumiscanJob.txt for 5298
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127958</index><jobIndex>62846510</jobIndex></request></jsub>
+ 
+5298 has an AugerID of 62846510
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5299
+
+Job 9/13
+Running trotta_lumiscanJob.txt for 5299
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127959</index><jobIndex>62846511</jobIndex></request></jsub>
+ 
+5299 has an AugerID of 62846511
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5300
+
+Job 10/13
+Running trotta_lumiscanJob.txt for 5300
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127960</index><jobIndex>62846512</jobIndex></request></jsub>
+ 
+5300 has an AugerID of 62846512
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5301
+
+Job 11/13
+Running trotta_lumiscanJob.txt for 5301
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127961</index><jobIndex>62846513</jobIndex></request></jsub>
+ 
+5301 has an AugerID of 62846513
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5302
+
+Job 12/13
+Running trotta_lumiscanJob.txt for 5302
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127962</index><jobIndex>62846514</jobIndex></request></jsub>
+ 
+5302 has an AugerID of 62846514
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Run number read from file: 5303
+
+Job 13/13
+Running trotta_lumiscanJob.txt for 5303
+Submitting batch
+Parsing script ... (it may take while)
+<jsub><request><index>30127963</index><jobIndex>62846515</jobIndex></request></jsub>
+ 
+5303 has an AugerID of 62846515
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+###############################################################################################################
+############################################ END OF JOB SUBMISSIONS ###########################################
+###############################################################################################################
+ 
+5151 has an AugerID of 62846503
+5152 has an AugerID of 62846504
+5153 has an AugerID of 62846505
+5164 has an AugerID of 62846506
+5165 has an AugerID of 62846507
+5295 has an AugerID of 62846508
+5297 has an AugerID of 62846509
+5298 has an AugerID of 62846510
+5299 has an AugerID of 62846511
+5300 has an AugerID of 62846512
+5301 has an AugerID of 62846513
+5302 has an AugerID of 62846514
+5303 has an AugerID of 62846515
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62846515  trottar     A    priority    --         ...umiscan_5303   Jan 22 17:41  --         --         hallc     
+ 
+There is 1 job remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62846515  trottar     A    priority    --         ...umiscan_5303   Jan 22 17:41  --         --         hallc     
+ 
+There is 1 job remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JOB_ID    USER      STAT    QUEUE      EXEC_HOST   JOB_NAME         SUBMIT_TIME   CPU_TIME  WALLTIME  ACCOUNT    
+62846515  trottar     Q    priority    --         ...umiscan_5303   Jan 22 17:45  --         --         hallc     
+ 
+There are 0 jobs remaining
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_
+|ID-62846503 (run 5151) has printed batch job information to file
+|Amount of allocated memory used: 0kb/2500mb
+_
+|ID-62846504 (run 5152) has printed batch job information to file
+|Amount of allocated memory used: 658308kb/2500mb
+_
+|ID-62846505 (run 5153) has printed batch job information to file
+|Amount of allocated memory used: 664460kb/2500mb
+_
+|ID-62846506 (run 5164) has printed batch job information to file
+|Amount of allocated memory used: 665332kb/2500mb
+_
+|ID-62846507 (run 5165) has printed batch job information to file
+|Amount of allocated memory used: 899164kb/2500mb
+_
+|ID-62846508 (run 5295) has printed batch job information to file
+|Amount of allocated memory used: 663236kb/2500mb
+_
+|ID-62846509 (run 5297) has printed batch job information to file
+|Amount of allocated memory used: 0kb/2500mb
+_
+|ID-62846510 (run 5298) has printed batch job information to file
+|Amount of allocated memory used: 899152kb/2500mb
+_
+|ID-62846511 (run 5299) has printed batch job information to file
+|Amount of allocated memory used: 861740kb/2500mb
+_
+|ID-62846512 (run 5300) has printed batch job information to file
+|Amount of allocated memory used: 665208kb/2500mb
+_
+|ID-62846513 (run 5301) has printed batch job information to file
+|Amount of allocated memory used: 0kb/2500mb
+_
+|ID-62846514 (run 5302) has printed batch job information to file
+|Amount of allocated memory used: 660488kb/2500mb
+_
+|ID-62846515 (run 5303) has printed batch job information to file
+|Amount of allocated memory used: 1741032kb/2500mb

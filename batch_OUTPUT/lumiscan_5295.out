@@ -3,29 +3,32 @@
 Errors...
  
 Error in <THaFormula::Compile>:  Bad numerical expression : ":SHMSaerogelgainfatorsfromLH2production4965"
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  <THcParmList::LoadParmValues>: Could not find `gpbeam` in database!
+/home/trottar/Analysis/hallc_replay/run_Replay.sh: line 66: 23003 Aborted                 /home/trottar/Analysis/hallc_replay/hcana -l -q "UTIL_KAONLT/scripts_Replay/replay_luminosity.C(5295,-1)"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Job info...
  
 
-Auger JobId: 59876881 [PBS JobId: 45673999]
+Auger JobId: 62849848 [PBS JobId: 48352188]
 
-11/11/2018 17:10:34  A     Name=lumiscan_5295;User=trottar;queue=prod64
-11/11/2018 17:11:09  A     Stagin started
-11/11/2018 17:11:09  A     Job started
-11/11/2018 18:04:10  A     Job started
-11/11/2018 18:04:10  A     Job completed
+01/22/2019 19:07:04  A     Name=lumiscan_5295;User=trottar;queue=priority
+01/22/2019 19:14:20  A     Stagin started
+01/22/2019 19:14:20  A     Job started
+01/22/2019 19:14:31  A     Job started
+01/22/2019 19:14:31  A     Job completed
 
-Job: 45673999.farmpbs14
+Job: 48352188.farmpbs14
 
-11/11/2018 17:10:43  S    enqueuing into prod64, state 2 hop 1
-11/11/2018 17:10:43  S    Holds u released at request of trottar@farmpbs14
-11/11/2018 17:10:43  A    queue=prod64
-11/11/2018 17:11:08  S    Job Run at request of root@farmpbs14
-11/11/2018 17:11:08  A    user=trottar group=enp account=hallc jobname=lumiscan_5295 queue=prod64 ctime=1541974243 qtime=1541974243 etime=1541974243 start=1541974268 owner=trottar@farmpbs14 exec_host=farm180215/46+farm180215/47 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=2000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=4000mb Resource_List.walltime=24:00:00 
-11/11/2018 18:04:17  S    Exit_status=0 resources_used.cput=00:53:02 resources_used.mem=1058704kb resources_used.vmem=1841696kb resources_used.walltime=00:53:07
-11/11/2018 18:04:17  S    on_job_exit valid pjob: 45673999.farmpbs14 (substate=50)
-11/11/2018 18:04:17  A    user=trottar group=enp account=hallc jobname=lumiscan_5295 queue=prod64 ctime=1541974243 qtime=1541974243 etime=1541974243 start=1541974268 owner=trottar@farmpbs14 exec_host=farm180215/46+farm180215/47 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=2000mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=4000mb Resource_List.walltime=24:00:00 session=316764 end=1541977457 Exit_status=0 resources_used.cput=00:53:02 resources_used.mem=1058704kb resources_used.vmem=1841696kb resources_used.walltime=00:53:07
-11/11/2018 18:04:23  S    dequeuing from prod64, state COMPLETE
+01/22/2019 19:10:52  S    enqueuing into priority, state 2 hop 1
+01/22/2019 19:10:52  S    Holds u released at request of trottar@farmpbs14
+01/22/2019 19:10:52  A    queue=priority
+01/22/2019 19:14:18  S    Job Run at request of root@farmpbs14
+01/22/2019 19:14:18  A    user=trottar group=enp account=hallc jobname=lumiscan_5295 queue=priority ctime=1548202252 qtime=1548202252 etime=1548202252 start=1548202458 owner=trottar@farmpbs14 exec_host=farm12009/0+farm12009/1 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=04:00:00 
+01/22/2019 19:14:33  S    Exit_status=0 resources_used.cput=00:00:13 resources_used.mem=1488kb resources_used.vmem=115188kb resources_used.walltime=00:00:15
+01/22/2019 19:14:33  S    on_job_exit valid pjob: 48352188.farmpbs14 (substate=50)
+01/22/2019 19:14:33  S    dequeuing from priority, state COMPLETE
+01/22/2019 19:14:33  A    user=trottar group=enp account=hallc jobname=lumiscan_5295 queue=priority ctime=1548202252 qtime=1548202252 etime=1548202252 start=1548202458 owner=trottar@farmpbs14 exec_host=farm12009/0+farm12009/1 Resource_List.arch=centos7 Resource_List.file=2929687kb Resource_List.mem=1250mb Resource_List.neednodes=1:ppn=2 Resource_List.nodect=1 Resource_List.nodes=1:ppn=2 Resource_List.vmem=2500mb Resource_List.walltime=04:00:00 session=22149 end=1548202473 Exit_status=0 resources_used.cput=00:00:13 resources_used.mem=1488kb resources_used.vmem=115188kb resources_used.walltime=00:00:15
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
